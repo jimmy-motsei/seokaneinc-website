@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@source "../../src/**/*.{js,ts,jsx,tsx,mdx}";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --seokane-red: #6C1413;
+  --seokane-red-light: #A11D23;
+  --seokane-gold: #D4AF37;
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-seokane-red: var(--seokane-red);
+  --color-seokane-red-light: var(--seokane-red-light);
+  --color-seokane-gold: var(--seokane-gold);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg-seokane {
+  background-color: var(--seokane-red);
+}
+
+.text-seokane {
+  color: var(--seokane-red);
+}
+
+.border-seokane {
+  border-color: var(--seokane-red);
+}
+
