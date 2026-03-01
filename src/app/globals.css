@@ -1,58 +1,314 @@
+/* ============================================================
+   SEOKANE INC. — Global Stylesheet
+   src/app/globals.css
+   ============================================================ */
+
 @import "tailwindcss";
 @source "../../src/**/*.{js,ts,jsx,tsx,mdx}";
 
+/* ─── CSS Custom Properties ────────────────────────────────────
+   Single source of truth for design tokens.
+   Tailwind theme variables reference these via var(--*).
+   ─────────────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --seokane-red: #6C1413;
-  --seokane-red-light: #A11D23;
-  --seokane-gold: #D4AF37;
-  --zinc-50: #fafafa;
-  --zinc-100: #f4f4f5;
-  --zinc-200: #e4e4e7;
-  --zinc-300: #d4d4d8;
-  --zinc-400: #a1a1aa;
-  --zinc-500: #71717a;
-  --zinc-600: #52525b;
-  --zinc-700: #3f3f46;
-  --zinc-800: #27272a;
-  --zinc-900: #18181b;
-  --zinc-950: #09090b;
+  /* Colours */
+  --color-navy: #1b2a6b;
+  --color-navy-dark: #0d1530;
+  --color-navy-light: #243680;
+  --color-navy-muted: #2e3f7f;
+  --color-amber: #f5a623;
+  --color-amber-light: #f7b84b;
+  --color-amber-dark: #d4891a;
+  --color-surface: #eae8f0;
+  --color-surface-dark: #d4d0df;
+  --color-surface-light: #f4f3f8;
+  --color-ink: #0d1530;
+  --color-ink-muted: #4a5378;
+  --color-white: #ffffff;
+
+  /* Typography — populated by next/font in layout.tsx */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  /* Spacing rhythm */
+  --space-section: 6rem;
+  --space-section-sm: 4rem;
+  --max-width: 1280px;
+  --gutter: 1.5rem;
+  --gutter-md: 2.5rem;
+
+  /* Transitions */
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Legacy aliases for existing utility usage */
+  --background: var(--color-white);
+  --foreground: var(--color-ink);
+  --seokane-red: var(--color-navy);
+  --seokane-red-light: var(--color-navy-light);
+  --seokane-gold: var(--color-amber);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-seokane: var(--seokane-red);
   --color-seokane-red: var(--seokane-red);
   --color-seokane-red-light: var(--seokane-red-light);
   --color-seokane-gold: var(--seokane-gold);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: var(--color-navy);
+  --color-navy-dark: var(--color-navy-dark);
+  --color-navy-light: var(--color-navy-light);
+  --color-navy-muted: var(--color-navy-muted);
+  --color-amber: var(--color-amber);
+  --color-amber-light: var(--color-amber-light);
+  --color-amber-dark: var(--color-amber-dark);
+  --color-surface: var(--color-surface);
+  --color-surface-dark: var(--color-surface-dark);
+  --color-surface-light: var(--color-surface-light);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-white: var(--color-white);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Base Reset & Element Defaults ─────────────────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-ink);
+    background-color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-navy-dark);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-base);
+  }
+
+  a:hover {
+    color: var(--color-amber);
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-amber);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+
+  ::selection {
+    background-color: var(--color-amber);
+    color: var(--color-navy-dark);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
+/* ─── Layout Utilities ───────────────────────────────────────── */
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
 
-.bg-seokane {
-  background-color: var(--seokane-red);
-}
+  @media (min-width: 768px) {
+    .container-site {
+      padding-inline: var(--gutter-md);
+    }
+  }
 
-.text-seokane {
-  color: var(--seokane-red);
-}
+  .section-padding {
+    padding-block: var(--space-section);
+  }
 
-.border-seokane {
-  border-color: var(--seokane-red);
-}
+  .section-padding-sm {
+    padding-block: var(--space-section-sm);
+  }
 
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-amber);
+  }
+
+  .prose-site p {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.75;
+    color: var(--color-ink-muted);
+    max-width: 65ch;
+  }
+
+  .prose-site p + p {
+    margin-top: 1.25rem;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background-color: var(--color-amber);
+    color: var(--color-navy-dark);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 0.375rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition:
+      background-color var(--transition-base),
+      box-shadow var(--transition-base),
+      transform var(--transition-base);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-amber-dark);
+    box-shadow: 0 4px 16px rgb(245 166 35 / 40%);
+    transform: translateY(-1px);
+    color: var(--color-navy-dark);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background-color: transparent;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 0.375rem;
+    border: 2px solid var(--color-navy);
+    cursor: pointer;
+    transition:
+      background-color var(--transition-base),
+      color var(--transition-base),
+      border-color var(--transition-base);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background-color: transparent;
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 0.375rem;
+    border: 2px solid rgb(255 255 255 / 40%);
+    cursor: pointer;
+    transition:
+      background-color var(--transition-base),
+      border-color var(--transition-base);
+  }
+
+  .btn-ghost:hover {
+    background-color: rgb(255 255 255 / 8%);
+    border-color: rgb(255 255 255 / 70%);
+  }
+
+  .card-base {
+    background-color: var(--color-white);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 2px 16px rgb(13 21 48 / 8%);
+    transition:
+      box-shadow var(--transition-slow),
+      transform var(--transition-slow);
+  }
+
+  .card-base:hover {
+    box-shadow: 0 8px 32px rgb(13 21 48 / 14%);
+    transform: translateY(-3px);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal[data-delay="1"] {
+    transition-delay: 100ms;
+  }
+  .reveal[data-delay="2"] {
+    transition-delay: 200ms;
+  }
+  .reveal[data-delay="3"] {
+    transition-delay: 300ms;
+  }
+  .reveal[data-delay="4"] {
+    transition-delay: 400ms;
+  }
+}

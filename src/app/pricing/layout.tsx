@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pricing & Discovery Packages | Seokane Inc.",
-  description: "Explore our Explorer and Deep Dive discovery packages for specialized market research.",
+  title: "Redirecting | Seokane Incorporated",
+  description: "Redirect route.",
 };
 
 export default function PricingLayout({
