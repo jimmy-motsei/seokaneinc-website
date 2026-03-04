@@ -1,18 +1,25 @@
 type PlaceholderImageProps = {
   label: string;
   className?: string;
+  square?: boolean; // removes rounded-xl and border for full-bleed / flush contexts
+  dark?: boolean;   // dark cool gradient — for use on dark/navy backgrounds (e.g. hero portrait)
 };
 
-export function PlaceholderImage({ label, className = "" }: PlaceholderImageProps) {
+export function PlaceholderImage({
+  label,
+  className = "",
+  square = false,
+  dark = false,
+}: PlaceholderImageProps) {
   return (
     <div
-      className={`relative overflow-hidden rounded-xl border border-navy/20 bg-surface-light ${className}`}
+      className={`relative overflow-hidden ${dark ? "bg-[var(--color-navy-dark)]" : "bg-[#e8e8ec]"} ${square ? "" : "rounded-none border border-[var(--color-surface-dark)]"} ${className}`}
       role="img"
       aria-label={label}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,166,35,0.28),transparent_55%),linear-gradient(135deg,rgba(27,42,107,0.08),rgba(234,232,240,0.6))]" />
+      <div className={`absolute inset-0 ${dark ? "ph-gradient-dark" : "ph-gradient"}`} />
       <div className="relative flex h-full min-h-56 items-center justify-center p-6 text-center">
-        <p className="eyebrow text-navy">{label}</p>
+        <p className={`eyebrow ${dark ? "text-white/40" : "text-navy"}`}>{label}</p>
       </div>
     </div>
   );

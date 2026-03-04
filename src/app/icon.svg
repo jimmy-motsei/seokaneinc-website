@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background: Midnight Navy with rounded corners (app-icon style) -->
+  <rect width="100" height="100" rx="22" fill="#1c2b30"/>
+
+  <!-- Teardrop / comma — upper right -->
+  <path fill="#d2a647" d="M77 12C87 11 95 19 94 28C93 37 85 43 76 41C67 39 62 29 65 20C67 13 72 12 77 12Z"/>
+
+  <!-- Main diagonal swoosh -->
+  <path fill="#d2a647" d="M13 68C21 52 45 29 67 22C79 18 90 23 91 35C92 46 84 58 71 65C52 73 27 73 17 70C14 69 12 69 13 68Z"/>
+
+  <!-- Bottom-left corner arc -->
+  <path fill="#d2a647" d="M13 76L40 76C39 88 29 96 13 96Z"/>
+</svg>
