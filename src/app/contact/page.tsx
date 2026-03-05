@@ -51,7 +51,7 @@ export default function ContactPage() {
                 id="name"
                 name="name"
                 required
-                className="w-full rounded-md border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
+                className="w-full border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
               />
             </div>
             <div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 name="email"
                 type="email"
                 required
-                className="w-full rounded-md border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
+                className="w-full border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
               />
             </div>
             <div>
@@ -74,7 +74,7 @@ export default function ContactPage() {
                 id="subject"
                 name="subject"
                 required
-                className="w-full rounded-md border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
+                className="w-full border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
               />
             </div>
             <div>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                 name="message"
                 rows={5}
                 required
-                className="w-full rounded-md border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
+                className="w-full border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
               />
             </div>
             <input type="text" name="company_website" tabIndex={-1} autoComplete="off" className="hidden" />

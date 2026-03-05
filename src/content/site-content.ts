@@ -88,17 +88,17 @@ export const proofPoints = [
   {
     title: "Deep Corporate Experience",
     description:
-      "Our leadership combines executive corporate roles and legal practice, bringing business context to legal decisions.",
+      "Our Director has held senior executive roles at Alexander Forbes Risk Services, the SABC, and VVM Global Services — including Chief Executive Officer. That background means we understand your business context, not just the legal technicalities.",
   },
   {
     title: "Focused High-Impact Expertise",
     description:
-      "We concentrate on commercial litigation, transactions, compliance, and employment matters where business risk is highest.",
+      "We concentrate on areas where businesses face their greatest challenges: commercial litigation, corporate transactions, regulatory compliance, and employment matters. Focused expertise delivers better outcomes.",
   },
   {
     title: "Proven Track Record Since 2001",
     description:
-      "Our roots trace back to Seokane Lesomo Attorneys, with over two decades of continuous service delivery.",
+      "While Seokane Incorporated was established in 2016, our practice traces its roots to Seokane Lesomo Attorneys, founded in June 2001 — representing over two decades of continuous legal service delivery.",
   },
 ];
 
@@ -136,23 +136,25 @@ export const teamMembers = [
   {
     name: "City Seokane",
     title: "Director",
-    bio: "A commercially minded legal leader with executive and advisory experience across major South African institutions. City leads strategic client matters with a focus on technical quality and practical outcomes.",
+    bio: "Admitted as an attorney in 1999, City brings over two decades of combined legal and executive experience. He has held senior roles at Alexander Forbes Risk Services, the SABC, and VVM Global Services — including Chief Executive Officer — before establishing Seokane Inc. He leads strategic client matters with technical precision and a genuine understanding of commercial realities.",
   },
   {
     name: "Modiegi Mafalo",
-    title: "Associate",
-    bio: "Modiegi supports corporate, litigation, and employment matters with disciplined legal execution and client-first communication.",
+    title: "Senior Associate",
+    bio: "Admitted as an attorney of the High Court in June 2018, Modiegi leads the firm's corporate litigation practice. She holds an LL.B from the University of Limpopo and a Postgraduate Certificate in Corporate Law from UNISA, with particular interest in mercantile, banking, and tax law.",
   },
   {
     name: "Tshadi Lefakane",
     title: "Candidate Attorney",
-    bio: "Tshadi contributes to legal research, drafting, and matter support across the firm's core practice areas.",
+    bio: "A candidate attorney registered with the Legal Practice Council, Tshadi holds an LLB from the University of South Africa. She provides grounded support across commercial contracts, employment law, civil litigation, and wills and estates.",
   },
 ];
 
 export const office = {
-  address: "18 Eton Road, Parktown, Johannesburg, 2193, South Africa",
-  phone: "+27 (0)11 123 4567",
-  email: "info@seokaneinc.co.za",
+  address: "1 Maxwell Drive, Sunninghill, Johannesburg, 2191",
+  phone: "+27 (0)11 052 2817",
+  mobile: "+27 (0)83 778 9288",
+  fax: "+27 (0)10 020 1861",
+  email: "city@seokaneinc.co.za",
   hours: "Monday to Friday, 08:00 - 17:00",
 };

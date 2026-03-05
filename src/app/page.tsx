@@ -14,23 +14,23 @@ export const metadata: Metadata = {
 const whyChooseItems = [
   {
     icon: Scale,
-    title: "Deep Expertise",
-    body: "Technically excellent legal counsel across commercial litigation, corporate law, and employment matters.",
+    title: "Deep Corporate Experience",
+    body: "Our Director has held executive roles at Alexander Forbes, the SABC, and VVM Global Services. We understand the commercial pressures behind every legal decision.",
   },
   {
     icon: Users,
     title: "Client-Centric",
-    body: "We build lasting relationships grounded in trust, transparency, and clear communication.",
+    body: "We build lasting relationships grounded in trust, transparency, and honest communication. You get direct access to senior expertise on every matter.",
   },
   {
     icon: TrendingUp,
     title: "Proven Track Record",
-    body: "Over two decades of continuous service delivery across complex business and commercial matters.",
+    body: "Admitted to the bar in 1999 and in practice since 2001, our team has delivered outcomes across complex commercial litigation, corporate transactions, and employment disputes.",
   },
   {
     icon: Briefcase,
     title: "Strategic Advice",
-    body: "Legal guidance aligned to your business objectives, timelines, and commercial risk profile.",
+    body: "Our advice is shaped by your business objectives, timelines, and risk profile — not just the legal technicalities. We help you make commercially sound decisions.",
   },
 ];
 
@@ -38,28 +38,28 @@ const faqs = [
   {
     question: "What types of matters does Seokane Inc. handle?",
     answer:
-      "We handle a broad range of commercial and corporate legal matters including commercial litigation, corporate transactions, employment and labour disputes, estate and trust administration, and ongoing business compliance. Our focus is on growing businesses and corporate clients.",
+      "We handle commercial and corporate legal matters including commercial litigation, corporate transactions, employment and labour disputes, estate and trust administration, and ongoing business compliance. Our focus is on growing businesses and corporate clients who need technically rigorous, commercially grounded advice.",
     open: true,
   },
   {
     question: "How do I schedule a consultation?",
     answer:
-      "You can schedule a consultation by completing our contact form, calling our office directly, or emailing us at info@seokaneinc.co.za. We aim to respond within one business day.",
+      "You can schedule a consultation by completing our contact form, calling our office on +27 (0)11 052 2817, or emailing us at city@seokaneinc.co.za. We aim to respond within one business day.",
   },
   {
     question: "Do you work with small and medium-sized businesses?",
     answer:
-      "Yes. We have a dedicated SME services offering that provides affordable, practical legal support for smaller businesses — including company secretarial services, contract drafting, and employment law guidance.",
+      "Yes. We have a dedicated SME services offering that provides practical, affordable legal support for smaller businesses — including company secretarial services, commercial contract drafting, and employment law guidance.",
   },
   {
     question: "Where is Seokane Inc. located?",
     answer:
-      "Our offices are located at 18 Eton Road, Parktown, Johannesburg, 2193. We serve clients across South Africa and can accommodate remote consultations.",
+      "Our offices are located at 1 Maxwell Drive, Sunninghill, Johannesburg, 2191. We serve clients across South Africa and can accommodate remote consultations where appropriate.",
   },
   {
     question: "What should I bring to my first consultation?",
     answer:
-      "Bring any relevant documents related to your matter — contracts, correspondence, corporate documents, or notices. A brief written summary of your situation is also helpful. We will guide you on specifics once your consultation is confirmed.",
+      "Bring any relevant documents related to your matter — contracts, correspondence, corporate documents, or notices received. A brief written summary of your situation is also helpful. We will guide you on specifics once your consultation is confirmed.",
   },
 ];
 
@@ -76,24 +76,24 @@ export default function HomePage() {
           {/* Left: text content */}
           <div className="relative z-10 flex flex-col justify-center px-6 py-20 md:px-10 lg:w-[54%] lg:py-28 lg:pl-[max(2.5rem,calc((100vw-1280px)/2+2.5rem))] lg:pr-16">
             <span className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-white/8 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-white/70">
-              Your Attorney at Law
+              Boutique Corporate Law Firm · Est. 2001
             </span>
 
             <h1 className="text-[clamp(2.6rem,5vw,4rem)] font-bold leading-[1.08] tracking-tight text-white">
-              Providing Expert<br />
-              Legal Solutions<br />
-              That Protect You.
+              Strategic Legal<br />
+              Counsel for<br />
+              Growing Businesses.
             </h1>
 
             <p className="mt-5 max-w-[480px] text-base font-light leading-relaxed text-white/60">
-              With decades of experience across complex legal matters, we provide
-              strategic solutions that safeguard your rights, protect your interests,
-              and guide you through every step with confidence and clarity.
+              Technically excellent, solution-oriented advice that helps corporate
+              clients and growing businesses navigate complexity, manage risk, and
+              achieve their commercial objectives.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Link href="/contact" className="btn-light">
-                Schedule a Call
+                Schedule a Consultation
               </Link>
               <Link
                 href="/practice-areas"
@@ -102,7 +102,7 @@ export default function HomePage() {
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/15 transition-colors hover:bg-white/25">
                   <Play className="h-3 w-3 fill-current translate-x-px" aria-hidden="true" />
                 </span>
-                Watch Video
+                Explore Practice Areas
               </Link>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function HomePage() {
             />
 
             {/* Attorney name card — overlaid bottom-left of photo */}
-            <div className="absolute bottom-8 left-8 rounded-xl bg-black/55 px-5 py-3.5 backdrop-blur-sm">
+            <div className="absolute bottom-8 left-8 bg-black/55 px-5 py-3.5 backdrop-blur-sm">
               <p className="text-sm font-semibold text-white">City Seokane</p>
               <p className="mt-0.5 text-xs text-white/55">20+ Years Experience</p>
             </div>
@@ -141,13 +141,13 @@ export default function HomePage() {
                 {[
                   {
                     label: "Legal insight",
-                    title: "Recent Successes and Community Impact",
-                    body: "Seokane Inc. continues to advance justice and empower clients.",
+                    title: "Navigating Commercial Disputes in South Africa",
+                    body: "Practical guidance on managing high-stakes business conflicts.",
                   },
                   {
                     label: "Firm news",
-                    title: "Advocacy, Achievement and Engagement",
-                    body: "Seokane continues to make strides in the legal landscape.",
+                    title: "Seokane Inc. Expands Corporate Advisory Services",
+                    body: "Strengthening our offering for growing businesses across Gauteng.",
                   },
                 ].map((item) => (
                   <Link
@@ -183,42 +183,49 @@ export default function HomePage() {
             <div>
               <p className="eyebrow mb-3">About Us</p>
               <h2 className="text-4xl xl:text-5xl">
-                Seokane is a Legacy<br />of Legal Excellence
+                Two Decades of Legal<br />and Corporate Excellence
               </h2>
             </div>
             <div className="prose-site self-center">
               <p>
-                At Seokane Incorporated, we pride ourselves on a rich history of delivering
-                exceptional legal services and fostering meaningful relationships with our
-                clients. With a commitment to integrity and professionalism, our team of
-                experienced attorneys has navigated complex legal landscapes since 2001.
+                Seokane Incorporated was established in January 2016, building on the
+                foundation of Seokane Lesomo Attorneys, which has served clients since
+                June 2001. Our leadership combines over two decades of legal practice
+                with executive corporate experience — giving our clients advice that is
+                both technically rigorous and grounded in real business context.
               </p>
             </div>
           </div>
 
           {/* Stat cards — 95% on dark card to match Lexor priority */}
-          <div className="grid gap-5 sm:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-3">
             {/* Dark card — lead stat */}
             <div className="stat-card-dark">
-              <p className="text-7xl font-serif font-bold text-white leading-none">95%</p>
-              <p className="mt-3 text-sm font-semibold text-white/80">Client Satisfaction Rate</p>
-              <p className="mt-1 text-xs text-white/50">Based on post-case client feedback</p>
+              <p className="text-7xl font-sans font-bold text-white leading-none">95%</p>
+              <div>
+                <p className="text-sm font-semibold text-white/80">Client Satisfaction Rate</p>
+                <p className="mt-1 text-xs text-white/50">Based on post-case client feedback</p>
+              </div>
             </div>
 
             {/* Light card */}
             <div className="stat-card-light">
-              <p className="text-7xl font-serif font-bold text-[var(--color-navy-dark)] leading-none">20+</p>
-              <p className="mt-3 text-sm font-semibold text-[var(--color-ink)]">Years Combined Experience</p>
-              <p className="mt-1 text-xs text-[var(--color-ink-muted)]">Founded on roots dating back to 2001</p>
+              <p className="text-7xl font-sans font-bold text-[var(--color-navy-dark)] leading-none">20+</p>
+              <div>
+                <p className="text-sm font-semibold text-[var(--color-ink)]">Years Combined Experience</p>
+                <p className="mt-1 text-xs text-[var(--color-ink-muted)]">Founded on roots dating back to 2001</p>
+              </div>
             </div>
 
             {/* Light card */}
             <div className="stat-card-light">
-              <p className="text-7xl font-serif font-bold text-[var(--color-navy-dark)] leading-none">5</p>
-              <p className="mt-3 text-sm font-semibold text-[var(--color-ink)]">Focused Practice Areas</p>
-              <p className="mt-1 text-xs text-[var(--color-ink-muted)]">
-                Commercial · Corporate · Employment · Estates · Compliance
-              </p>
+              <p className="text-7xl font-sans font-bold text-[var(--color-navy-dark)] leading-none">5</p>
+              <div>
+                <p className="text-sm font-semibold text-[var(--color-ink)]">Focused Practice Areas</p>
+                <p className="mt-1 text-xs text-[var(--color-ink-muted)]">
+                  Commercial · Corporate · Employment · Estates · Compliance
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -230,19 +237,21 @@ export default function HomePage() {
           <p className="eyebrow mb-3">Why Choose Us</p>
           <h2 className="text-4xl xl:text-5xl mb-10">Why Choose Seokane</h2>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {whyChooseItems.map(({ icon: Icon, title, body }, i) => {
               const isFirst = i === 0;
               return (
                 <article
                   key={title}
-                  className={`feature-card ${isFirst ? "bg-[var(--color-navy-dark)] border-[var(--color-navy-dark)]" : ""}`}
+                  className={`feature-card ${isFirst ? "bg-[var(--color-navy)] shadow-none" : ""}`}
                 >
-                  <div className={`mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg ${isFirst ? "bg-white/15" : "bg-[var(--color-navy-dark)]"}`}>
+                  <div className={`inline-flex h-11 w-11 items-center justify-center ${isFirst ? "bg-white/15" : "bg-[var(--color-navy-dark)]"}`}>
                     <Icon className="h-5 w-5 text-white" aria-hidden="true" />
                   </div>
-                  <h3 className={`text-xl mb-2 ${isFirst ? "text-white" : ""}`}>{title}</h3>
-                  <p className={`text-sm leading-relaxed ${isFirst ? "text-white/65" : "text-[var(--color-ink-muted)]"}`}>{body}</p>
+                  <div>
+                    <h3 className={`text-xl mb-2 ${isFirst ? "text-white" : ""}`}>{title}</h3>
+                    <p className={`text-sm leading-relaxed line-clamp-4 ${isFirst ? "text-white/65" : "text-[var(--color-ink-muted)]"}`}>{body}</p>
+                  </div>
                 </article>
               );
             })}
@@ -252,7 +261,7 @@ export default function HomePage() {
 
       {/* ── 4. PRACTICE AREAS — SPLIT ──────────────────────────── */}
       <section className="section-padding bg-white">
-        <div className="container-site grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div className="container-site grid gap-16 lg:grid-cols-2 lg:items-center">
 
           {/* Left: image with Lexor-style corner bracket decorations */}
           <div className="relative">
@@ -285,7 +294,7 @@ export default function HomePage() {
                     href={`/practice-areas/${area.slug}`}
                     className={`practice-item group block ${i === 0 ? "practice-item-active" : ""}`}
                   >
-                    <span className={`text-3xl font-serif font-semibold min-w-[3rem] ${i === 0 ? "text-[var(--color-navy-dark)]/60" : "text-[var(--color-navy-dark)]/20"}`}>
+                    <span className={`text-3xl font-sans font-semibold min-w-[3rem] ${i === 0 ? "text-[var(--color-navy-dark)]/60" : "text-[var(--color-navy-dark)]/20"}`}>
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div className="flex-1">
@@ -334,10 +343,10 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((member) => (
               <article key={member.name} className="group">
-                <div className="overflow-hidden rounded-lg mb-4">
+                <div className="overflow-hidden mb-4">
                   <PlaceholderImage
                     label={`Photo of ${member.name}`}
                     className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -363,7 +372,7 @@ export default function HomePage() {
             aria-hidden="true"
           />
           <blockquote>
-            <p className="font-serif text-2xl sm:text-3xl xl:text-4xl leading-snug text-[var(--color-navy-dark)]">
+            <p className="font-sans text-2xl sm:text-3xl xl:text-4xl leading-snug text-[var(--color-navy-dark)]">
               &ldquo;Seokane truly stands out for their professionalism and dedication to
               their clients. I&rsquo;m grateful to have found a firm that not only delivers
               results but genuinely cares about their clients&rsquo; well-being.&rdquo;
@@ -450,17 +459,17 @@ export default function HomePage() {
 
         <div className="container-site relative z-10 text-center">
           <h2 className="text-4xl sm:text-5xl text-white mb-3">
-            Facing Legal Challenges?
+            Ready to Resolve Your<br />Legal Challenge?
           </h2>
-          <p className="text-2xl sm:text-3xl font-serif text-white/80 mb-4">
-            Seokane is Here to Help
+          <p className="text-2xl sm:text-3xl font-sans text-white/80 mb-4">
+            Seokane Inc. is Here to Help.
           </p>
           <p className="text-white/55 mb-10 max-w-md mx-auto">
-            From complex disputes to everyday legal matters, trust us to guide you
-            with expertise and care.
+            From commercial disputes to compliance and employment matters, we deliver
+            strategic legal counsel with the commercial context your situation demands.
           </p>
           <Link href="/contact" className="btn-primary">
-            Get Started
+            Schedule a Consultation
           </Link>
         </div>
       </section>

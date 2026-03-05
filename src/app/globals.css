@@ -28,35 +28,28 @@
   --color-white:        #ffffff;
 
   /* Typography — loaded via next/font in layout.tsx */
-  --font-display: "Manrope", system-ui, sans-serif;
-  --font-body:    "Manrope", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
 
   /* Spacing rhythm */
   --space-section:    6rem;
   --space-section-sm: 4rem;
   --max-width:        1280px;
-  --gutter:           1.5rem;
-  --gutter-md:        2.5rem;
+  --gutter:           1.5rem;   /* mobile: 24px */
+  --gutter-md:        3rem;     /* tablet 768px+: 48px */
+  --gutter-lg:        5rem;     /* desktop 1024px+: 80px */
 
   /* Transitions */
   --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Legacy aliases */
+  /* Semantic aliases */
   --background: var(--color-white);
   --foreground: var(--color-ink);
-  --seokane-red: var(--color-navy);
-  --seokane-red-light: var(--color-navy-light);
-  --seokane-gold: var(--color-amber);
 }
 
 @theme inline {
   --color-background:        var(--background);
   --color-foreground:        var(--foreground);
-  --color-seokane:           var(--seokane-red);
-  --color-seokane-red:       var(--seokane-red);
-  --color-seokane-red-light: var(--seokane-red-light);
-  --color-seokane-gold:      var(--seokane-gold);
   --color-navy:              var(--color-navy);
   --color-navy-dark:         var(--color-navy-dark);
   --color-navy-light:        var(--color-navy-light);
@@ -72,7 +65,7 @@
   --color-ink-muted:         var(--color-ink-muted);
   --color-white:             var(--color-white);
   --font-sans:               var(--font-body);
-  --font-serif:              var(--font-display);
+  --font-serif:              var(--font-body);
 }
 
 /* ─── Base Reset & Element Defaults ─────────────────────────── */
@@ -103,29 +96,29 @@
   }
 
   h1 {
-    font-family: var(--font-display);
-    font-weight: 800;
-    line-height: 0.95;
-    letter-spacing: -0.03em;
+    font-family: var(--font-body);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
     color: var(--color-navy-dark);
   }
 
   h2,
   h3 {
-    font-family: var(--font-display);
-    font-weight: 800;
-    line-height: 1.0;
-    letter-spacing: -0.03em;
+    font-family: var(--font-body);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
     color: var(--color-navy-dark);
   }
 
   h4,
   h5,
   h6 {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: 1.2;
+    letter-spacing: 0;
     color: var(--color-navy-dark);
   }
 
@@ -171,6 +164,12 @@
   @media (min-width: 768px) {
     .container-site {
       padding-inline: var(--gutter-md);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-site {
+      padding-inline: var(--gutter-lg);
     }
   }
 
@@ -230,14 +229,14 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.875rem 2rem;
     background-color: var(--color-amber);
     color: var(--color-navy-dark);
     font-family: var(--font-body);
     font-size: 0.9375rem;
     font-weight: 600;
     letter-spacing: 0.02em;
-    border-radius: 0.375rem;
+    border-radius: 0.125rem;
     border: 2px solid transparent;
     cursor: pointer;
     transition:
@@ -261,14 +260,14 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.875rem 2rem;
     background-color: transparent;
     color: var(--color-navy);
     font-family: var(--font-body);
     font-size: 0.9375rem;
     font-weight: 600;
     letter-spacing: 0.02em;
-    border-radius: 0.375rem;
+    border-radius: 0.125rem;
     border: 2px solid var(--color-navy);
     cursor: pointer;
     transition:
@@ -287,14 +286,14 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.875rem 2rem;
     background-color: var(--color-white);
     color: var(--color-navy-dark);
     font-family: var(--font-body);
     font-size: 0.9375rem;
     font-weight: 600;
     letter-spacing: 0.02em;
-    border-radius: 0.375rem;
+    border-radius: 0.125rem;
     border: 2px solid transparent;
     cursor: pointer;
     transition:
@@ -315,14 +314,14 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.875rem 2rem;
     background-color: transparent;
     color: var(--color-white);
     font-family: var(--font-body);
     font-size: 0.9375rem;
     font-weight: 600;
     letter-spacing: 0.02em;
-    border-radius: 0.375rem;
+    border-radius: 0.125rem;
     border: 2px solid rgb(255 255 255 / 40%);
     cursor: pointer;
     transition:
@@ -335,59 +334,75 @@
     border-color: rgb(255 255 255 / 70%);
   }
 
-  /* ─── Cards — square corners to match Lexor ─── */
+  /* ─── Cards ─── */
   .card-base {
     background-color: var(--color-white);
     border-radius: 0;
-    padding: 2rem;
-    border: 1px solid var(--color-surface-dark);
+    padding: 2.5rem;
+    box-shadow: 0 1px 8px rgb(13 21 48 / 6%);
     transition:
       box-shadow var(--transition-slow),
       transform var(--transition-slow);
   }
 
   .card-base:hover {
-    box-shadow: 0 8px 32px rgb(13 21 48 / 10%);
+    box-shadow: 0 8px 32px rgb(13 21 48 / 12%);
     transform: translateY(-2px);
   }
 
   /* Stat card — dark navy variant */
   .stat-card-dark {
-    background-color: var(--color-navy-dark);
+    background-color: var(--color-navy);
     border-radius: 0;
-    padding: 2rem;
+    padding: 2.5rem;
     color: var(--color-white);
+    aspect-ratio: 1 / 1;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   /* Stat card — light variant */
   .stat-card-light {
     background-color: var(--color-white);
     border-radius: 0;
-    padding: 2rem;
+    padding: 2.5rem;
     border: 1px solid var(--color-surface-dark);
+    aspect-ratio: 1 / 1;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   /* Feature card — Why Choose Us */
   .feature-card {
     background-color: var(--color-white);
     border-radius: 0;
-    padding: 2rem;
-    border: 1px solid var(--color-surface-dark);
+    padding: 2.5rem;
+    box-shadow: 0 1px 8px rgb(13 21 48 / 6%);
+    aspect-ratio: 1 / 1;
+    align-self: start;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition:
       box-shadow var(--transition-slow),
-      border-color var(--transition-slow);
+      transform var(--transition-slow);
   }
 
   .feature-card:hover {
-    box-shadow: 0 8px 32px rgb(13 21 48 / 10%);
-    border-color: var(--color-navy-light);
+    box-shadow: 0 8px 32px rgb(13 21 48 / 12%);
+    transform: translateY(-2px);
   }
 
   /* Practice area numbered item */
   .practice-item {
     display: flex;
     gap: 1.5rem;
-    padding: 1.25rem 0;
+    padding: 1.5rem 0;
     border-bottom: 1px solid var(--color-surface-dark);
     transition: color var(--transition-base);
   }

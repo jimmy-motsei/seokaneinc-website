@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const font = Manrope({
+const bodyFont = Manrope({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.variable} antialiased`}>
+      <body className={`${bodyFont.variable} antialiased`}>
         {children}
       </body>
     </html>
