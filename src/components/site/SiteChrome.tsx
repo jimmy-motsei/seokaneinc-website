@@ -13,7 +13,7 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="bg-[var(--color-navy-dark)] border-b border-white/10">
+    <header className="bg-[var(--color-navy)] border-b border-white/10">
       <div className="container-site flex flex-wrap items-center justify-between gap-4 py-5">
         <Link href="/" className="flex items-center gap-3">
           <SeokaneSymbol size={38} color="#d2a647" />
