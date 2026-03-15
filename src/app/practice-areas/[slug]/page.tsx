@@ -56,10 +56,11 @@ export default function PracticeAreaDetailPage({ params }: { params: PageParams 
             <p className="eyebrow">Discuss Your Matter</p>
             <h3 className="mt-3 text-2xl">Need Strategic Direction?</h3>
             <p className="mt-4 text-sm text-ink-muted">
-              We can assess risk, clarify options, and recommend a practical legal route.
+              We can assess your risk, clarify your options, and recommend a practical
+              legal route.
             </p>
             <Link href="/contact" className="btn-primary mt-6">
-              Schedule Consultation
+              Schedule a Consultation
             </Link>
           </div>
         </div>

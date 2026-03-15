@@ -17,18 +17,19 @@
   --color-navy-light:   #2d4a6f;  /* Steel Indigo     — cards, mid-tone */
   --color-navy-muted:   #3a5a80;  /* Steel Indigo+    — subtle borders */
   --color-frost-blue:   #b0caee;  /* Frost Blue       — light accent */
-  --color-amber:        #d2a647;  /* Amber Yellow     — CTA / highlight */
-  --color-amber-light:  #deba6f;  /* Amber light variant */
-  --color-amber-dark:   #b88c35;  /* Amber dark variant */
-  --color-surface:      #f7f8fa;  /* Near-white background */
+  --color-amber:        #E78034;  /* Jaffa Orange      — CTA / highlight */
+  --color-amber-light:  #EFA06A;  /* Jaffa light */
+  --color-amber-dark:   #C45E1A;  /* Jaffa dark */
+  --color-surface:      #f5f1e8;  /* Warm off-white background */
   --color-surface-dark: #eceef2;  /* Dividers / borders */
-  --color-surface-light:#fafbfd;
+  --color-surface-light:#faf7f2;
   --color-ink:          #1c2b30;  /* Midnight Navy for text */
   --color-ink-muted:    #6b7a8d;  /* Muted gray-blue  */
   --color-white:        #ffffff;
 
   /* Typography — loaded via next/font in layout.tsx */
   --font-body: "Manrope", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
 
   /* Spacing rhythm */
   --space-section:    6rem;
@@ -65,7 +66,8 @@
   --color-ink-muted:         var(--color-ink-muted);
   --color-white:             var(--color-white);
   --font-sans:               var(--font-body);
-  --font-serif:              var(--font-body);
+  --font-serif:              var(--font-display);
+  --font-display:            var(--font-display);
 }
 
 /* ─── Base Reset & Element Defaults ─────────────────────────── */
@@ -96,19 +98,26 @@
   }
 
   h1 {
-    font-family: var(--font-body);
-    font-weight: 800;
-    line-height: 0.95;
-    letter-spacing: -0.03em;
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
     color: var(--color-navy-dark);
   }
 
-  h2,
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--color-navy-dark);
+  }
+
   h3 {
     font-family: var(--font-body);
-    font-weight: 800;
-    line-height: 1.0;
-    letter-spacing: -0.03em;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
     color: var(--color-navy-dark);
   }
 
@@ -116,8 +125,8 @@
   h5,
   h6 {
     font-family: var(--font-body);
-    font-weight: 700;
-    line-height: 1.15;
+    font-weight: 600;
+    line-height: 1.25;
     letter-spacing: 0;
     color: var(--color-navy-dark);
   }

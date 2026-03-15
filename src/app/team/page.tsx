@@ -7,7 +7,7 @@ import { teamMembers } from "@/content/site-content";
 export const metadata: Metadata = {
   title: "Our Team | Seokane Incorporated",
   description:
-    "Meet the legal professionals at Seokane Incorporated serving commercial and corporate clients in South Africa.",
+    "Meet the legal professionals at Seokane Incorporated — experienced attorneys serving commercial and corporate clients across South Africa.",
 };
 
 export default function TeamPage() {
@@ -18,8 +18,8 @@ export default function TeamPage() {
           <p className="eyebrow">Our Team</p>
           <h1 className="mt-4 text-5xl">Experienced Legal Professionals</h1>
           <p className="mt-6 max-w-3xl text-lg text-ink-muted">
-            We combine legal expertise and commercial perspective to deliver strategic,
-            solution-oriented support.
+            We&rsquo;re a focused team. You&rsquo;ll work with people who know your matter and give
+            it the attention it deserves.
           </p>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default function TeamPage() {
         <div className="container-site text-center">
           <h2 className="text-4xl text-white">Work With Our Team</h2>
           <p className="mx-auto mt-4 max-w-2xl text-surface">
-            Tell us about your legal challenge and we will recommend the right next step.
+            Tell us about your legal challenge. We&rsquo;ll recommend the right next step.
           </p>
           <Link href="/contact" className="btn-ghost mt-8">
             Contact Us

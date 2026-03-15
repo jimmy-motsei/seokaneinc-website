@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
+
+const displayFont = Playfair_Display({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+});
 
 const bodyFont = Manrope({
   variable: "--font-body",
@@ -12,6 +19,10 @@ export const metadata: Metadata = {
   title: "Seokane Incorporated | Boutique South African Law Firm",
   description:
     "Strategic legal counsel and commercial solutions for growing businesses and corporate clients in South Africa.",
+  icons: {
+    icon: "/seokane-symbol.png",
+    apple: "/seokane-symbol.png",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bodyFont.variable} antialiased`}>
+      <body className={`${displayFont.variable} ${bodyFont.variable} antialiased`}>
         {children}
       </body>
     </html>

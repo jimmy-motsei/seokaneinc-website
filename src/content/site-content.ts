@@ -13,13 +13,13 @@ export const practiceAreas: PracticeArea[] = [
     shortDescription:
       "Strategic dispute resolution for high-stakes commercial conflicts.",
     fullDescription:
-      "We represent businesses in commercial disputes with a strategy-first approach focused on risk, speed, and commercial outcomes. Our team supports negotiation, mediation, and court proceedings while protecting your operational continuity.",
+      "When a commercial dispute arises — a breach of contract, an unpaid debt, a partnership breakdown — the decisions you make in the first days matter. We approach every matter with a strategy-first mindset, focused on your risk, your timeline, and the commercial outcome you need. We represent businesses in the High Court and Magistrates' Court, and advise throughout the dispute lifecycle — from early negotiation through to judgment and enforcement.",
     services: [
       "Breach of contract disputes",
       "Debt recovery and enforcement",
       "Urgent interdict applications",
       "High Court and Magistrates' Court litigation",
-      "Settlement and mediation strategy",
+      "Settlement negotiation and mediation strategy",
     ],
   },
   {
@@ -28,7 +28,7 @@ export const practiceAreas: PracticeArea[] = [
     shortDescription:
       "Practical legal structuring for transactions, growth, and governance.",
     fullDescription:
-      "From transaction support to contract architecture, we help leadership teams make legally sound business decisions. Our advice is technically rigorous and grounded in commercial realities.",
+      "Whether you're closing a transaction, restructuring your business, or negotiating a contract that needs to hold under pressure — sound corporate legal advice is what protects your interests and keeps your business moving forward. We work with management teams, directors, and shareholders to provide advice that is technically rigorous and commercially practical. We understand that legal decisions happen in the context of business deadlines and competing priorities.",
     services: [
       "Commercial contract drafting and review",
       "Due diligence support",
@@ -43,7 +43,7 @@ export const practiceAreas: PracticeArea[] = [
     shortDescription:
       "Employer-focused labour law guidance for compliance and dispute readiness.",
     fullDescription:
-      "We help businesses manage labour risk through proactive policy design and responsive dispute support. Our guidance is built for South African employment frameworks and practical workplace realities.",
+      "South African employment law is detailed, constantly evolving, and unforgiving of procedural errors. Whether you're managing a disciplinary matter, navigating a retrenchment, or defending a CCMA dispute, the outcome often depends on whether the right processes were followed from the start. We help employers build solid employment frameworks and respond effectively when disputes arise.",
     services: [
       "Employment contract drafting",
       "Disciplinary and grievance process support",
@@ -58,7 +58,7 @@ export const practiceAreas: PracticeArea[] = [
     shortDescription:
       "Clear, compassionate legal support for estate and trust administration.",
     fullDescription:
-      "We assist families and fiduciaries with wills, trust structures, and deceased estate administration. Our approach combines legal precision with clear guidance during sensitive transitions.",
+      "Dealing with a deceased estate or setting up a trust often happens during emotionally difficult times — and the legal and administrative requirements can feel overwhelming. We provide clear, step-by-step guidance to make the process as straightforward as possible. Our goal is to give you confidence that everything is being handled correctly, so you can focus on what matters.",
     services: [
       "Will drafting and review",
       "Trust formation and advisory",
@@ -73,7 +73,7 @@ export const practiceAreas: PracticeArea[] = [
     shortDescription:
       "Ongoing compliance support to keep your business properly constituted.",
     fullDescription:
-      "We act as a legal compliance partner for companies that need reliable governance and filing support. Our team helps you stay aligned with regulatory obligations and company secretarial requirements.",
+      "Staying compliant with South Africa's Companies Act, CIPC requirements, and ongoing statutory obligations is not optional — and it's easy to fall behind when you're focused on running your business. We act as a reliable compliance partner, handling the filings, records, and documentation that keep your business properly constituted and audit-ready.",
     services: [
       "CIPC company registrations",
       "Director and shareholder changes",
@@ -109,14 +109,14 @@ export const smeServices = [
       "Company registrations and amendments",
       "Director and shareholder updates",
       "Statutory register maintenance",
-      "Compliance filing support",
+      "Compliance filing and annual returns",
     ],
   },
   {
     title: "Corporate Legal Services",
     items: [
       "Commercial contract drafting and negotiation",
-      "Terms and policy development",
+      "Terms of service and supplier agreements",
       "Dispute prevention and resolution support",
       "Transaction and partnership legal support",
     ],
@@ -136,17 +136,17 @@ export const teamMembers = [
   {
     name: "City Seokane",
     title: "Director",
-    bio: "Admitted as an attorney in 1999, City brings over two decades of combined legal and executive experience. He has held senior roles at Alexander Forbes Risk Services, the SABC, and VVM Global Services — including Chief Executive Officer — before establishing Seokane Inc. He leads strategic client matters with technical precision and a genuine understanding of commercial realities.",
+    bio: "City was admitted as an attorney of the High Court in 1999, and has been in active practice since 2001. Before establishing private practice, he held senior executive roles at major South African organisations — including Alexander Forbes Risk Services, the SABC, and VVM Global Services, where he served as Chief Executive Officer. That corporate background is what makes his legal counsel different. He leads all strategic client matters at Seokane Inc. and is the primary point of contact for corporate and high-value commercial work.",
   },
   {
     name: "Modiegi Mafalo",
     title: "Senior Associate",
-    bio: "Admitted as an attorney of the High Court in June 2018, Modiegi leads the firm's corporate litigation practice. She holds an LL.B from the University of Limpopo and a Postgraduate Certificate in Corporate Law from UNISA, with particular interest in mercantile, banking, and tax law.",
+    bio: "Modiegi was admitted as an attorney of the High Court in June 2018. She holds an LLB from the University of Limpopo and a Postgraduate Certificate in Corporate Law from UNISA. She leads the firm's corporate litigation practice, with particular expertise in mercantile law, banking law, and commercial dispute resolution.",
   },
   {
     name: "Tshadi Lefakane",
     title: "Candidate Attorney",
-    bio: "A candidate attorney registered with the Legal Practice Council, Tshadi holds an LLB from the University of South Africa. She provides grounded support across commercial contracts, employment law, civil litigation, and wills and estates.",
+    bio: "Tshadi holds an LLB from UNISA and is registered as a candidate attorney with the Legal Practice Council. She provides grounded, diligent support across commercial contracts, employment law, civil litigation, and wills and estates — working directly with clients at every stage.",
   },
 ];
 

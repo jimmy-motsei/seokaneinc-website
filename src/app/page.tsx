@@ -14,23 +14,23 @@ export const metadata: Metadata = {
 const whyChooseItems = [
   {
     icon: Scale,
-    title: "Deep Corporate Experience",
-    body: "Our Director has held executive roles at Alexander Forbes, the SABC, and VVM Global Services. We understand the commercial pressures behind every legal decision.",
+    title: "We've Sat on Your Side of the Table",
+    body: "City Seokane held executive positions — including CEO — at major South African corporates before establishing private practice. We don't just understand the law. We understand the commercial pressure behind every legal decision you face.",
   },
   {
     icon: Users,
-    title: "Client-Centric",
-    body: "We build lasting relationships grounded in trust, transparency, and honest communication. You get direct access to senior expertise on every matter.",
+    title: "Focused Where It Matters Most",
+    body: "We concentrate on the legal areas where businesses face their greatest challenges: commercial disputes, corporate transactions, employment matters, and regulatory compliance. Focus delivers better outcomes than breadth.",
   },
   {
     icon: TrendingUp,
-    title: "Proven Track Record",
-    body: "Admitted to the bar in 1999 and in practice since 2001, our team has delivered outcomes across complex commercial litigation, corporate transactions, and employment disputes.",
+    title: "Over Two Decades in Practice",
+    body: "Admitted to the bar in 1999 and in practice since 2001, our team has handled complex matters across High Court litigation, corporate transactions, and employment disputes. Experience you can rely on.",
   },
   {
     icon: Briefcase,
-    title: "Strategic Advice",
-    body: "Our advice is shaped by your business objectives, timelines, and risk profile — not just the legal technicalities. We help you make commercially sound decisions.",
+    title: "Advice Built Around Your Objectives",
+    body: "We frame every legal recommendation around your business goals, timelines, and risk tolerance — not just the legal process. You leave every consultation knowing exactly where you stand and what to do next.",
   },
 ];
 
@@ -38,28 +38,28 @@ const faqs = [
   {
     question: "What types of matters does Seokane Inc. handle?",
     answer:
-      "We handle commercial and corporate legal matters including commercial litigation, corporate transactions, employment and labour disputes, estate and trust administration, and ongoing business compliance. Our focus is on growing businesses and corporate clients who need technically rigorous, commercially grounded advice.",
+      "We handle commercial and corporate legal matters — including commercial litigation, corporate transactions, employment and labour disputes, estate and trust administration, and ongoing business compliance. Our focus is on growing businesses and corporate clients who need technically rigorous, commercially grounded advice.",
     open: true,
   },
   {
     question: "How do I schedule a consultation?",
     answer:
-      "You can schedule a consultation by completing our contact form, calling our office on +27 (0)11 052 2817, or emailing us at city@seokaneinc.co.za. We aim to respond within one business day.",
+      "Complete the contact form on our Contact page, call us on +27 (0)11 052 2817, or email city@seokaneinc.co.za. We aim to respond within one business day.",
   },
   {
     question: "Do you work with small and medium-sized businesses?",
     answer:
-      "Yes. We have a dedicated SME services offering that provides practical, affordable legal support for smaller businesses — including company secretarial services, commercial contract drafting, and employment law guidance.",
+      "Yes. We have a dedicated SME services offering that provides practical, affordable legal support — including company secretarial services, commercial contract drafting, and employment law guidance. Visit our For SMEs page for details.",
   },
   {
     question: "Where is Seokane Inc. located?",
     answer:
-      "Our offices are located at 1 Maxwell Drive, Sunninghill, Johannesburg, 2191. We serve clients across South Africa and can accommodate remote consultations where appropriate.",
+      "Our office is at 1 Maxwell Drive, Sunninghill, Johannesburg, 2191. We serve clients across South Africa and can accommodate remote consultations where appropriate.",
   },
   {
     question: "What should I bring to my first consultation?",
     answer:
-      "Bring any relevant documents related to your matter — contracts, correspondence, corporate documents, or notices received. A brief written summary of your situation is also helpful. We will guide you on specifics once your consultation is confirmed.",
+      "Bring any documents related to your matter — contracts, correspondence, corporate records, or notices received. A brief written summary of your situation also helps. We'll guide you on specifics once your consultation is confirmed.",
   },
 ];
 
@@ -86,9 +86,8 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-5 max-w-[480px] text-base font-light leading-relaxed text-white/60">
-              Technically excellent, solution-oriented advice that helps corporate
-              clients and growing businesses navigate complexity, manage risk, and
-              achieve their commercial objectives.
+              When a legal problem threatens what you&rsquo;ve built, you need an attorney
+              who understands both the law and the business behind it. That&rsquo;s what we do.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -125,7 +124,7 @@ export default function HomePage() {
             {/* Attorney name card — overlaid bottom-left of photo */}
             <div className="absolute bottom-8 left-8 bg-black/55 px-5 py-3.5 backdrop-blur-sm">
               <p className="text-sm font-semibold text-white">City Seokane</p>
-              <p className="mt-0.5 text-xs text-white/55">20+ Years Experience</p>
+              <p className="mt-0.5 text-xs text-white/55">20+ Years&rsquo; Experience</p>
             </div>
           </div>
         </div>
@@ -181,18 +180,24 @@ export default function HomePage() {
           {/* Heading row */}
           <div className="grid gap-8 lg:grid-cols-2 lg:items-start mb-12">
             <div>
-              <p className="eyebrow mb-3">About Us</p>
+              <p className="eyebrow mb-3">About Seokane Inc.</p>
               <h2 className="text-4xl xl:text-5xl">
-                Two Decades of Legal<br />and Corporate Excellence
+                Legal Depth. Commercial Judgment.
               </h2>
             </div>
             <div className="prose-site self-center">
               <p>
-                Seokane Incorporated was established in January 2016, building on the
-                foundation of Seokane Lesomo Attorneys, which has served clients since
-                June 2001. Our leadership combines over two decades of legal practice
-                with executive corporate experience — giving our clients advice that is
-                both technically rigorous and grounded in real business context.
+                Seokane Incorporated is a boutique Johannesburg law firm serving growing
+                businesses and corporate clients across South Africa. We&rsquo;ve been at this
+                since 2001 — long enough to have handled the disputes, contracts, and
+                compliance challenges that keep business owners up at night.
+              </p>
+              <p className="mt-4">
+                What sets us apart is not just our legal expertise. Our Director, City
+                Seokane, held senior executive roles at Alexander Forbes, the SABC, and
+                VVM Global Services before establishing private practice. That corporate
+                background means our advice is shaped by real business context — not just
+                legal technicalities.
               </p>
             </div>
           </div>
@@ -235,7 +240,7 @@ export default function HomePage() {
       <section className="section-padding bg-[var(--color-surface)]">
         <div className="container-site">
           <p className="eyebrow mb-3">Why Choose Us</p>
-          <h2 className="text-4xl xl:text-5xl mb-10">Why Choose Seokane</h2>
+          <h2 className="text-4xl xl:text-5xl mb-10">Why Growing Businesses Choose Seokane</h2>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {whyChooseItems.map(({ icon: Icon, title, body }, i) => {
@@ -382,7 +387,8 @@ export default function HomePage() {
                 <PlaceholderImage label="" className="h-full w-full object-cover" />
               </div>
               <div className="text-left">
-                <p className="text-sm font-semibold text-[var(--color-ink)]">Client Name</p>
+                {/* TODO: Replace with named client testimonial */}
+                <p className="text-sm font-semibold text-[var(--color-ink)]">[Client Name]</p>
                 <p className="text-xs text-[var(--color-ink-muted)]">Chief Executive Officer</p>
               </div>
             </footer>
@@ -466,7 +472,8 @@ export default function HomePage() {
           </p>
           <p className="text-white/55 mb-10 max-w-md mx-auto">
             From commercial disputes to compliance and employment matters, we deliver
-            strategic legal counsel with the commercial context your situation demands.
+            strategic legal counsel grounded in over two decades of practice and real
+            executive experience.
           </p>
           <Link href="/contact" className="btn-primary">
             Schedule a Consultation

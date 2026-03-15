@@ -6,7 +6,7 @@ import { practiceAreas } from "@/content/site-content";
 export const metadata: Metadata = {
   title: "Practice Areas | Seokane Incorporated",
   description:
-    "Explore Seokane Inc. practice areas: Commercial Litigation, Corporate & Commercial Law, Employment & Labour, Estates & Trusts, and Business Compliance.",
+    "Commercial litigation, corporate and commercial law, employment and labour, estates and trusts, and business compliance. Boutique legal expertise for SA businesses.",
 };
 
 export default function PracticeAreasPage() {
@@ -17,8 +17,8 @@ export default function PracticeAreasPage() {
           <p className="eyebrow">Practice Areas</p>
           <h1 className="mt-4 text-5xl">Our Areas of Expertise</h1>
           <p className="mt-6 max-w-3xl text-lg text-ink-muted">
-            We focus on high-impact legal areas where growing businesses need clear,
-            commercially sound guidance.
+            We concentrate on the legal areas where growing businesses face their greatest
+            challenges. Not broad. Focused. Because depth of expertise delivers better outcomes.
           </p>
         </div>
       </section>
@@ -39,6 +39,18 @@ export default function PracticeAreasPage() {
               </Link>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section-padding-sm bg-navy text-white">
+        <div className="container-site text-center">
+          <h2 className="text-3xl text-white">Not Sure Where to Start?</h2>
+          <p className="mx-auto mt-4 max-w-xl text-surface">
+            Tell us what you&rsquo;re dealing with and we&rsquo;ll point you in the right direction.
+          </p>
+          <Link href="/contact" className="btn-ghost mt-8">
+            Contact Our Team
+          </Link>
         </div>
       </section>
     </SitePage>

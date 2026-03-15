@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ReactNode } from "react";
 import { practiceAreas, office } from "@/content/site-content";
-import { SeokaneSymbol } from "./SeokaneSymbol";
+import { MobileNav } from "./MobileNav";
 
 const navItems = [
   { href: "/about", label: "About" },
@@ -16,14 +17,20 @@ export function SiteHeader() {
     <header className="bg-[var(--color-navy)] border-b border-white/10">
       <div className="container-site flex flex-wrap items-center justify-between gap-4 py-5">
         <Link href="/" className="flex items-center gap-3">
-          <SeokaneSymbol size={38} color="#d2a647" />
+          <Image
+            src="/seokane-symbol.png"
+            alt="Seokane Inc. logo"
+            width={40}
+            height={40}
+            priority
+          />
           <div>
             <p className="text-xl font-bold text-white tracking-tight">Seokane Inc.</p>
             <p className="text-xs uppercase tracking-[0.12em] text-white/50">Attorneys</p>
           </div>
         </Link>
 
-        <nav className="flex flex-wrap items-center gap-6 text-sm font-medium text-white/70">
+        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-white/70">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -35,9 +42,11 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link href="/contact" className="btn-primary">
+        <Link href="/contact" className="btn-primary hidden lg:inline-flex">
           Schedule Consultation
         </Link>
+
+        <MobileNav navItems={navItems} office={office} />
       </div>
     </header>
   );
@@ -49,12 +58,18 @@ export function SiteFooter() {
       <div className="container-site grid gap-10 py-14 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <SeokaneSymbol size={32} color="var(--color-navy-dark)" />
+            <Image
+              src="/seokane-symbol.png"
+              alt="Seokane Inc. logo"
+              width={36}
+              height={36}
+            />
             <p className="text-xl font-bold tracking-tight text-[var(--color-navy-dark)]">Seokane Inc.</p>
           </div>
           <p className="text-sm leading-relaxed text-[var(--color-ink-muted)]">
-            Boutique South African law firm delivering strategic legal counsel and
-            commercial solutions for growing businesses.
+            Seokane Incorporated is a boutique South African law firm delivering strategic
+            legal counsel and commercial solutions for growing businesses and corporate
+            clients. In practice since 2001.
           </p>
         </div>
 
@@ -110,7 +125,7 @@ export function SiteFooter() {
         <div className="container-site flex flex-wrap items-center justify-between gap-3 py-4 text-xs text-[var(--color-ink-muted)]">
           <p>© {new Date().getFullYear()} Seokane Incorporated. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <Link href="/contact" className="transition-colors hover:text-[var(--color-ink)]">Privacy Policy</Link>
+            <Link href="/privacy" className="transition-colors hover:text-[var(--color-ink)]">Privacy Policy</Link>
             <Link href="/contact" className="transition-colors hover:text-[var(--color-ink)]">Terms of Service</Link>
           </div>
         </div>
