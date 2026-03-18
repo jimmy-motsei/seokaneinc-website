@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Scale, Users, TrendingUp, Briefcase, ChevronRight, Play, Quote, ArrowRight, Clock, Calendar } from "lucide-react";
 import { SitePage } from "@/components/site/SiteChrome";
-import { PlaceholderImage } from "@/components/site/PlaceholderImage";
 import { NewsletterWidget } from "@/components/site/NewsletterWidget";
 import { Stagger, StaggerItem } from "@/components/site/Animations";
 import { practiceAreas, teamMembers, recentArticles } from "@/content/site-content";
@@ -66,6 +65,12 @@ const faqs = [
   },
 ];
 
+const teamImages: Record<string, string> = {
+  "City Seokane":    "/images/team-city-seokane.jpg",
+  "Modiegi Mafalo":  "/images/team-modiegi-mafalo.jpg",
+  "Tshadi Lefakane": "/images/team-tshadi-lefakane.jpg",
+};
+
 export default function HomePage() {
   return (
     <SitePage>
@@ -111,11 +116,13 @@ export default function HomePage() {
 
           {/* Right: photo fills remaining width, bleeds to viewport edge */}
           <div className="relative hidden flex-1 lg:block">
-            <PlaceholderImage
-              label="Lead attorney portrait"
-              square
-              dark
-              className="absolute inset-0 h-full w-full"
+            <Image
+              src="/images/hero-attorney.jpg"
+              alt="City Seokane, Director — Seokane Incorporated"
+              fill
+              priority
+              className="object-cover object-center"
+              sizes="46vw"
             />
 
             {/* Left-edge gradient blends photo into dark bg */}
@@ -144,12 +151,12 @@ export default function HomePage() {
                   {
                     label: "Legal insight",
                     title: "Navigating Commercial Disputes in South Africa",
-                    body: "Practical guidance on managing high-stakes business conflicts.",
+                    img: "/images/hero-practice-commercial-litigation.jpg",
                   },
                   {
                     label: "Firm news",
                     title: "Seokane Inc. Expands Corporate Advisory Services",
-                    body: "Strengthening our offering for growing businesses across Gauteng.",
+                    img: "/images/hero-practice-corporate-commercial.jpg",
                   },
                 ].map((item) => (
                   <Link
@@ -157,8 +164,14 @@ export default function HomePage() {
                     href="/contact"
                     className="group flex items-center gap-3 min-w-0"
                   >
-                    <div className="h-12 w-16 flex-shrink-0 overflow-hidden rounded-md bg-white/10">
-                      <PlaceholderImage label="" square className="h-full w-full [&>div:last-child]:min-h-0 [&>div:last-child]:p-0" />
+                    <div className="h-12 w-16 flex-shrink-0 overflow-hidden rounded-md relative">
+                      <Image
+                        src={item.img}
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="64px"
+                      />
                     </div>
                     <div className="min-w-0">
                       <p className="text-[11px] uppercase tracking-widest text-[var(--color-amber)] mb-0.5">
@@ -283,10 +296,16 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-[var(--color-navy-dark)]" />
               <div className="absolute top-0 left-0 h-8 w-8 bg-white" />
             </div>
-            <PlaceholderImage
-              label="Attorneys in consultation"
-              className="relative z-0 h-[440px] w-full"
-            />
+            <div className="relative z-0 h-[440px] w-full overflow-hidden">
+              <Image
+                src="/images/attorneys-consultation.jpg"
+                alt="Seokane Inc. attorneys in consultation"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="img-overlay-tint" aria-hidden="true" />
+            </div>
           </div>
 
           {/* Right: numbered practice areas */}
@@ -354,11 +373,15 @@ export default function HomePage() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((member) => (
               <article key={member.name} className="group">
-                <div className="overflow-hidden mb-4">
-                  <PlaceholderImage
-                    label={`Photo of ${member.name}`}
-                    className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                <div className="overflow-hidden mb-4 relative h-72 w-full">
+                  <Image
+                    src={teamImages[member.name] ?? "/images/team-city-seokane.jpg"}
+                    alt={`Photo of ${member.name}`}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
+                  <div className="img-overlay-tint" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl">{member.name}</h3>
                 <p className="text-sm font-medium text-[var(--color-amber)] mt-0.5">{member.title}</p>
@@ -386,8 +409,8 @@ export default function HomePage() {
               results but genuinely cares about their clients&rsquo; well-being.&rdquo;
             </p>
             <footer className="mt-8 flex items-center justify-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-[var(--color-surface)] overflow-hidden flex-shrink-0">
-                <PlaceholderImage label="" className="h-full w-full object-cover" />
+              <div className="h-10 w-10 rounded-full bg-[var(--color-navy-dark)] flex-shrink-0 flex items-center justify-center">
+                <span className="text-sm font-semibold text-white/70">C</span>
               </div>
               <div className="text-left">
                 {/* TODO: Replace with named client testimonial */}

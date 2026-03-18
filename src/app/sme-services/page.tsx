@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PlaceholderImage } from "@/components/site/PlaceholderImage";
+import Image from "next/image";
 import { SitePage } from "@/components/site/SiteChrome";
 import { smeServices } from "@/content/site-content";
 
@@ -24,7 +24,17 @@ export default function SmeServicesPage() {
               legal support that keeps your business protected and properly structured as it grows.
             </p>
           </div>
-          <PlaceholderImage label="Placeholder: SMEs Services Hero Image" />
+          <div className="relative h-80 lg:h-full lg:min-h-[360px] overflow-hidden">
+            <Image
+              src="/images/hero-sme.png"
+              alt="Legal support for South African SMEs"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
+            />
+            <div className="img-overlay-tint" aria-hidden="true" />
+          </div>
         </div>
       </section>
 

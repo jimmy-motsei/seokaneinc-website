@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PlaceholderImage } from "@/components/site/PlaceholderImage";
+import Image from "next/image";
 import { SitePage } from "@/components/site/SiteChrome";
 import { teamMembers } from "@/content/site-content";
+
+const teamImages: Record<string, string> = {
+  "City Seokane":    "/images/team-city-seokane.jpg",
+  "Modiegi Mafalo":  "/images/team-modiegi-mafalo.jpg",
+  "Tshadi Lefakane": "/images/team-tshadi-lefakane.jpg",
+};
 
 export const metadata: Metadata = {
   title: "Our Team | Seokane Incorporated",
@@ -28,8 +34,16 @@ export default function TeamPage() {
         <div className="container-site grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {teamMembers.map((member) => (
             <article key={member.name} className="card-base">
-              <PlaceholderImage label={`Placeholder Headshot: ${member.name}`} className="h-64" />
-              <h2 className="mt-6 text-2xl">{member.name}</h2>
+              <div className="relative h-64 w-full overflow-hidden -mx-10 -mt-10 mb-6" style={{ width: "calc(100% + 5rem)" }}>
+                <Image
+                  src={teamImages[member.name] ?? "/images/team-city-seokane.jpg"}
+                  alt={`Photo of ${member.name}`}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                />
+              </div>
+              <h2 className="text-2xl">{member.name}</h2>
               <p className="mt-1 text-sm font-semibold uppercase tracking-[0.1em] text-amber-dark">
                 {member.title}
               </p>

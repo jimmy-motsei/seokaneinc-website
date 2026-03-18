@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PlaceholderImage } from "@/components/site/PlaceholderImage";
+import Image from "next/image";
 import { SitePage } from "@/components/site/SiteChrome";
 
 export const metadata: Metadata = {
@@ -23,7 +23,17 @@ export default function AboutPage() {
               doing this since 2001 — with the experience and judgment to show for it.
             </p>
           </div>
-          <PlaceholderImage label="Placeholder: About Hero Image" />
+          <div className="relative h-80 lg:h-full lg:min-h-[360px] overflow-hidden">
+            <Image
+              src="/images/hero-about.jpg"
+              alt="Seokane Inc. attorneys at work"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
+            />
+            <div className="img-overlay-tint" aria-hidden="true" />
+          </div>
         </div>
       </section>
 

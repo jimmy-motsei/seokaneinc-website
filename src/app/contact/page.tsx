@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PlaceholderImage } from "@/components/site/PlaceholderImage";
+import Image from "next/image";
 import { SitePage } from "@/components/site/SiteChrome";
 import { ContactForm } from "@/components/site/ContactForm";
 import { office } from "@/content/site-content";
@@ -23,7 +23,17 @@ export default function ContactPage() {
               Use the form below or reach us directly. We aim to respond within one business day.
             </p>
           </div>
-          <PlaceholderImage label="Placeholder: Contact Hero Image" />
+          <div className="relative h-80 lg:h-full lg:min-h-[360px] overflow-hidden">
+            <Image
+              src="/images/hero-contact.png"
+              alt="Seokane Inc. office — 1 Maxwell Drive, Sunninghill"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
+            />
+            <div className="img-overlay-tint" aria-hidden="true" />
+          </div>
         </div>
       </section>
 
@@ -67,7 +77,26 @@ export default function ContactPage() {
 
       <section className="section-padding-sm bg-surface-light">
         <div className="container-site">
-          <PlaceholderImage label="Placeholder: Office location map" className="h-96" />
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center bg-[var(--color-navy-dark)] px-8 py-10 md:px-12 md:py-14">
+            <div>
+              <p className="eyebrow-light mb-3">How to Find Us</p>
+              <h2 className="text-2xl sm:text-3xl text-white mb-2">
+                1 Maxwell Drive, Sunninghill
+              </h2>
+              <p className="text-white/55 text-sm">Johannesburg, 2191 · Gauteng, South Africa</p>
+              <p className="mt-4 text-white/55 text-sm">
+                Monday to Friday, 08:00 – 17:00 · Parking available on site
+              </p>
+            </div>
+            <a
+              href="https://maps.google.com/?q=1+Maxwell+Drive+Sunninghill+Johannesburg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost mt-6 lg:mt-0 whitespace-nowrap"
+            >
+              Open in Google Maps
+            </a>
+          </div>
         </div>
       </section>
     </SitePage>

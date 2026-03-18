@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { PlaceholderImage } from "@/components/site/PlaceholderImage";
 import { SitePage } from "@/components/site/SiteChrome";
 import { practiceAreas } from "@/content/site-content";
+
+const practiceImages: Record<string, string> = {
+  "commercial-litigation":  "/images/hero-practice-commercial-litigation.jpg",
+  "corporate-commercial":   "/images/hero-practice-corporate-commercial.jpg",
+  "employment-labour":      "/images/hero-practice-employment-labour.jpg",
+  "estates-trusts":         "/images/hero-practice-estates-trusts.jpg",
+  "business-compliance":    "/images/hero-practice-business-compliance.png",
+};
 
 type PageParams = { slug: string };
 
@@ -38,7 +46,17 @@ export default function PracticeAreaDetailPage({ params }: { params: PageParams 
             <h1 className="mt-4 text-5xl">{area.title}</h1>
             <p className="mt-6 text-lg text-ink-muted">{area.fullDescription}</p>
           </div>
-          <PlaceholderImage label={`Placeholder: ${area.title} hero image`} />
+          <div className="relative h-80 lg:h-full lg:min-h-[360px] overflow-hidden">
+            <Image
+              src={practiceImages[area.slug] ?? "/images/attorneys-consultation.jpg"}
+              alt={`${area.title} — Seokane Inc.`}
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
+            />
+            <div className="img-overlay-tint" aria-hidden="true" />
+          </div>
         </div>
       </section>
 
