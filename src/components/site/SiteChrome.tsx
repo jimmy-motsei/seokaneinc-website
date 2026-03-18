@@ -78,7 +78,7 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow mb-4">Company</p>
           <ul role="list" className="space-y-2 text-sm text-[var(--color-ink-muted)]">
-            {navItems.map((item) => (
+            {navItems.filter((item) => item.href !== "/contact").map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="transition-colors hover:text-[var(--color-ink)]">
                   {item.label}
