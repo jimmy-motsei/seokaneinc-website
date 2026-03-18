@@ -308,7 +308,7 @@ export default function HomePage() {
                 <li key={area.slug}>
                   <Link
                     href={`/practice-areas/${area.slug}`}
-                    className={`practice-item group block ${i === 0 ? "practice-item-active" : ""}`}
+                    className="practice-item group block"
                   >
                     <span className={`text-3xl font-sans font-semibold min-w-[3rem] ${i === 0 ? "text-[var(--color-navy-dark)]/60" : "text-[var(--color-navy-dark)]/20"}`}>
                       {String(i + 1).padStart(2, "0")}

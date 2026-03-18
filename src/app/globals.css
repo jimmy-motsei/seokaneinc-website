@@ -468,18 +468,19 @@
   .practice-item {
     display: flex;
     gap: 1.5rem;
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 1.5rem 1rem;
+    border-left: 3px solid transparent;
     border-bottom: 1px solid var(--color-surface-dark);
-    transition: color var(--transition-base);
+    transition: border-left-color var(--transition-base), color var(--transition-base);
   }
 
   .practice-item:first-child {
     border-top: 1px solid var(--color-surface-dark);
   }
 
+  .practice-item:hover,
   .practice-item-active {
-    padding-left: 1rem;
-    border-left: 3px solid var(--color-amber);
+    border-left-color: var(--color-amber);
   }
 
   /* ─── Article body prose ─────────────────────────────────────
