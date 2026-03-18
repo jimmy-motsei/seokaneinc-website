@@ -255,10 +255,10 @@ export default function HomePage() {
                   key={title}
                   className={`feature-card ${isFirst ? "bg-[var(--color-navy)] shadow-none" : ""}`}
                 >
-                  <div className={`inline-flex h-11 w-11 items-center justify-center ${isFirst ? "bg-white/15" : "bg-[var(--color-navy-dark)]"}`}>
-                    <Icon className="h-5 w-5 text-white" aria-hidden="true" />
+                  <div className={`flex h-14 w-14 flex-shrink-0 items-center justify-center ${isFirst ? "bg-white/15" : "bg-[var(--color-navy-dark)]"}`}>
+                    <Icon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
-                  <div>
+                  <div className="mt-6">
                     <h3 className={`text-xl mb-2 ${isFirst ? "text-white" : ""}`}>{title}</h3>
                     <p className={`text-sm leading-relaxed line-clamp-4 ${isFirst ? "text-white/65" : "text-[var(--color-ink-muted)]"}`}>{body}</p>
                   </div>
