@@ -527,23 +527,31 @@
   .img-overlay-tint {
     position: absolute;
     inset: 0;
-    background: rgb(28 43 48 / 20%);
+    background: rgba(13, 22, 40, 0.08);
+    pointer-events: none;
+    z-index: 1;
   }
 
   /* Hero overlay — full-width article / page heroes */
   .img-overlay-hero {
     position: absolute;
     inset: 0;
-    background:
-      linear-gradient(to top, rgb(12 22 40 / 85%) 0%, rgb(12 22 40 / 35%) 55%, transparent 100%);
+    background: linear-gradient(
+      to top,
+      rgba(12, 22, 40, 0.55) 0%,
+      rgba(12, 22, 40, 0.15) 45%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 1;
   }
 
   /* Banner overlay — CTA or newsletter backgrounds */
   .img-overlay-banner {
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(ellipse at 30% 50%, rgb(27 46 72 / 80%) 0%, transparent 60%),
-      rgb(12 22 40 / 65%);
+    background: rgba(12, 22, 40, 0.30);
+    pointer-events: none;
+    z-index: 1;
   }
 }
