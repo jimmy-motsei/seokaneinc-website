@@ -77,7 +77,7 @@ export default function ContactPage() {
 
       <section className="section-padding-sm bg-surface-light">
         <div className="container-site">
-          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center bg-[var(--color-navy-dark)] px-8 py-10 md:px-12 md:py-14">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center bg-[var(--color-navy)] px-8 py-10 md:px-12 md:py-14">
             <div>
               <p className="eyebrow-light mb-3">How to Find Us</p>
               <h2 className="text-2xl sm:text-3xl text-white mb-2">
