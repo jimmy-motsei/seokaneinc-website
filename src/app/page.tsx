@@ -142,31 +142,20 @@ export default function HomePage() {
         {/* Recent Updates bar */}
         <div className="border-t border-white/10 bg-[var(--color-navy-dark)]">
           <div className="container-site py-4">
-            <div className="flex flex-wrap items-center gap-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/50 flex-shrink-0">
-                Recent Updates
+            <div className="flex flex-wrap items-center gap-6 lg:gap-0">
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/50 flex-shrink-0 lg:w-36">
+                Latest Insights
               </p>
-              <div className="flex flex-wrap gap-5">
-                {[
-                  {
-                    label: "Legal insight",
-                    title: "Navigating Commercial Disputes in South Africa",
-                    img: "/images/hero-practice-commercial-litigation.jpg",
-                  },
-                  {
-                    label: "Firm news",
-                    title: "Seokane Inc. Expands Corporate Advisory Services",
-                    img: "/images/hero-practice-corporate-commercial.jpg",
-                  },
-                ].map((item) => (
+              <div className="flex flex-1 flex-wrap justify-between gap-5">
+                {recentArticles.map((article) => (
                   <Link
-                    key={item.title}
-                    href="/contact"
-                    className="group flex items-center gap-3 min-w-0"
+                    key={article.slug}
+                    href={`/blog/${article.slug}`}
+                    className="group flex items-center gap-3 min-w-0 flex-1 basis-52"
                   >
-                    <div className="h-12 w-16 flex-shrink-0 overflow-hidden rounded-md relative">
+                    <div className="h-12 w-16 flex-shrink-0 overflow-hidden relative">
                       <Image
-                        src={item.img}
+                        src={article.image}
                         alt=""
                         fill
                         className="object-cover"
@@ -175,10 +164,10 @@ export default function HomePage() {
                     </div>
                     <div className="min-w-0">
                       <p className="text-[11px] uppercase tracking-widest text-[var(--color-amber)] mb-0.5">
-                        {item.label}
+                        {article.tag}
                       </p>
-                      <p className="text-xs font-semibold text-white group-hover:text-white/80 truncate max-w-[200px]">
-                        {item.title}
+                      <p className="text-xs font-semibold text-white group-hover:text-white/80 line-clamp-2 max-w-[220px]">
+                        {article.title}
                       </p>
                     </div>
                   </Link>
