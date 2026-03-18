@@ -56,7 +56,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="bg-white border-t border-[var(--color-surface-dark)]">
-      <div className="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         {/* Column 1: Brand */}
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3 mb-4">
@@ -105,34 +105,7 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        {/* Column 4: Resources */}
-        <div>
-          <p className="eyebrow mb-4">Resources</p>
-          <ul role="list" className="space-y-2 text-sm text-[var(--color-ink-muted)]">
-            <li>
-              <Link href="/blog" className="transition-colors hover:text-[var(--color-ink)]">
-                Legal Insights
-              </Link>
-            </li>
-            <li>
-              <Link href="/sme-services" className="transition-colors hover:text-[var(--color-ink)]">
-                SME Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="transition-colors hover:text-[var(--color-ink)]">
-                About the Firm
-              </Link>
-            </li>
-            <li>
-              <Link href="/privacy" className="transition-colors hover:text-[var(--color-ink)]">
-                Privacy Policy
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 5: Headquarters */}
+        {/* Column 4: Headquarters */}
         <div>
           <p className="eyebrow mb-4">Headquarters</p>
           <ul role="list" className="space-y-3 text-sm text-[var(--color-ink-muted)]">
