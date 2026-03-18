@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Clock, Calendar, ArrowLeft, ArrowRight, Tag } from "lucide-react";
 import { SitePage } from "@/components/site/SiteChrome";
+import { NewsletterWidget } from "@/components/site/NewsletterWidget";
 import { articles, practiceAreas } from "@/content/site-content";
 
 type PageParams = { slug: string };
@@ -188,6 +189,9 @@ export default function ArticlePage({ params }: { params: PageParams }) {
           </aside>
         </div>
       </section>
+
+      {/* ── Newsletter ────────────────────────────────────────── */}
+      <NewsletterWidget isDark />
 
       {/* ── Prev / Next navigation ────────────────────────────── */}
       {(prevArticle || nextArticle) && (
