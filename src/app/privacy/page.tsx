@@ -91,7 +91,7 @@ export default function PrivacyPage() {
           </div>
 
           <div className="pt-4 border-t border-surface-dark">
-            <Link href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-secondary">
               Return to Contact
             </Link>
           </div>

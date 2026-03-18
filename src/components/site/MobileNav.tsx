@@ -115,7 +115,7 @@ export function MobileNav({ navItems, office }: MobileNavProps) {
           </ul>
 
           <div className="mt-6">
-            <Link href="/contact" className="btn-primary w-full text-center" onClick={close}>
+            <Link href="/contact" className="btn-ghost w-full text-center" onClick={close}>
               Schedule Consultation
             </Link>
           </div>

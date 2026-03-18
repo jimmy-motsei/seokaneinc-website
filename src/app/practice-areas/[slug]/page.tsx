@@ -77,7 +77,7 @@ export default function PracticeAreaDetailPage({ params }: { params: PageParams 
               We can assess your risk, clarify your options, and recommend a practical
               legal route.
             </p>
-            <Link href="/contact" className="btn-primary mt-6">
+            <Link href="/contact" className="btn-secondary mt-6">
               Schedule a Consultation
             </Link>
           </div>

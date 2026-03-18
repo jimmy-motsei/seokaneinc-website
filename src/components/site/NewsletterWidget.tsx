@@ -82,7 +82,7 @@ export function NewsletterWidget({ variant = "dark" }: Props) {
                   </div>
                 )}
                 <button type="submit" disabled={isPending}
-                  className="btn-primary w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed">
+                  className={`${isDark ? "btn-ghost" : "btn-secondary"} w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed`}>
                   {isPending ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />Subscribing…</> : <>Subscribe to Legal Insights<ArrowRight className="h-4 w-4" aria-hidden="true" /></>}
                 </button>
                 <p className={`mt-3 text-[11px] leading-relaxed ${isDark ? "text-white/30" : "text-[var(--color-ink-faint)]"}`}>

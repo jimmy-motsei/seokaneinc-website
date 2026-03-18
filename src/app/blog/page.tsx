@@ -189,7 +189,7 @@ export default function BlogPage() {
             Our team is available for consultations across all practice areas. We aim to
             respond within one business day.
           </p>
-          <Link href="/contact" className="btn-primary">
+          <Link href="/contact" className="btn-ghost">
             Schedule a Consultation
           </Link>
         </div>

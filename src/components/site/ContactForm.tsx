@@ -113,7 +113,7 @@ export function ContactForm() {
       </div>
       <input type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
       <button type="submit" disabled={isPending}
-        className="btn-primary w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed">
+        className="btn-primary-amber w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed">
         {isPending ? (
           <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />Sending…</>
         ) : (

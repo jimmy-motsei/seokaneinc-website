@@ -120,7 +120,7 @@ export default function ArticlePage({ params }: { params: PageParams }) {
                 Our team provides strategic legal counsel across all practice areas.
                 Consultations available in person and remotely.
               </p>
-              <Link href="/contact" className="btn-primary w-full justify-center text-center block">
+              <Link href="/contact" className="btn-ghost w-full justify-center text-center block">
                 Schedule a Consultation
               </Link>
               <a

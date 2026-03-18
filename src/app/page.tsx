@@ -504,7 +504,7 @@ export default function HomePage() {
             <p className="text-[var(--color-ink-muted)] mb-8">
               Have another question? Please don&rsquo;t hesitate to contact our team.
             </p>
-            <Link href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-secondary">
               Contact Our Team
             </Link>
           </div>
@@ -571,7 +571,7 @@ export default function HomePage() {
             strategic legal counsel grounded in over two decades of practice and real
             executive experience.
           </p>
-          <Link href="/contact" className="btn-primary">
+          <Link href="/contact" className="btn-ghost">
             Schedule a Consultation
           </Link>
         </div>

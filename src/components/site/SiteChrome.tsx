@@ -43,7 +43,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link href="/contact" className="btn-primary hidden lg:inline-flex">
+        <Link href="/contact" className="btn-ghost hidden lg:inline-flex">
           Schedule Consultation
         </Link>
 
