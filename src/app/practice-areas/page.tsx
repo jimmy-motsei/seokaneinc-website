@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { SitePage } from "@/components/site/SiteChrome";
 import { practiceAreas } from "@/content/site-content";
 
@@ -13,13 +14,26 @@ export default function PracticeAreasPage() {
   return (
     <SitePage>
       <section className="section-padding bg-surface-light">
-        <div className="container-site">
-          <p className="eyebrow">Practice Areas</p>
-          <h1 className="mt-4 text-5xl">Our Areas of Expertise</h1>
-          <p className="mt-6 max-w-3xl text-lg text-ink-muted">
-            We concentrate on the legal areas where growing businesses face their greatest
-            challenges. Not broad. Focused. Because depth of expertise delivers better outcomes.
-          </p>
+        <div className="container-site grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="eyebrow">Practice Areas</p>
+            <h1 className="mt-4 text-5xl">Our Areas of Expertise</h1>
+            <p className="mt-6 text-lg text-ink-muted">
+              We concentrate on the legal areas where growing businesses face their greatest
+              challenges. Not broad. Focused. Because depth of expertise delivers better outcomes.
+            </p>
+          </div>
+          <div className="relative h-80 lg:h-full lg:min-h-[360px] overflow-hidden">
+            <Image
+              src="/images/attorneys-consultation.jpg"
+              alt="Seokane Inc. attorneys in consultation"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
+            />
+            <div className="img-overlay-banner" aria-hidden="true" />
+          </div>
         </div>
       </section>
 

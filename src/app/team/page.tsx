@@ -20,13 +20,27 @@ export default function TeamPage() {
   return (
     <SitePage>
       <section className="section-padding bg-surface-light">
-        <div className="container-site">
-          <p className="eyebrow">Our Team</p>
-          <h1 className="mt-4 text-5xl">Experienced Legal Professionals</h1>
-          <p className="mt-6 max-w-3xl text-lg text-ink-muted">
-            We&rsquo;re a focused team. You&rsquo;ll work with people who know your matter and give
-            it the attention it deserves.
-          </p>
+        <div className="container-site grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="eyebrow">Our Team</p>
+            <h1 className="mt-4 text-5xl">Experienced Legal Professionals</h1>
+            <p className="mt-6 text-lg text-ink-muted">
+              We&rsquo;re a focused team of admitted attorneys and candidate attorneys. You&rsquo;ll
+              work directly with the person who knows your matter — and who gives it the
+              attention it deserves.
+            </p>
+          </div>
+          <div className="relative h-80 lg:h-full lg:min-h-[360px] overflow-hidden">
+            <Image
+              src="/images/hero-about.jpg"
+              alt="Seokane Inc. legal team"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
+            />
+            <div className="img-overlay-banner" aria-hidden="true" />
+          </div>
         </div>
       </section>
 
