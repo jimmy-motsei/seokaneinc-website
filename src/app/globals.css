@@ -421,6 +421,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .stat-card-light:hover {
+    background-color: var(--color-navy);
+    border-color: var(--color-navy);
+    transform: translateY(-2px);
+  }
+
+  .stat-card-light:hover p {
+    color: rgb(255 255 255 / 0.8);
+  }
+
+  .stat-card-light:hover p:first-child {
+    color: var(--color-white);
+  }
+
+  .stat-card-light:hover p:last-child {
+    color: rgb(255 255 255 / 0.5);
   }
 
   /* Feature card — Why Choose Us */
