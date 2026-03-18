@@ -3,7 +3,9 @@
     "allow": [
       "WebFetch(domain:www.behance.net)",
       "Bash(npm run build)",
-      "Bash(npm run dev)"
+      "Bash(npm run dev)",
+      "Bash(ls -la /Users/ramoloimotsei/seokaneinc-website/public/images/team-*)",
+      "Bash(identify /Users/ramoloimotsei/seokaneinc-website/public/images/team-city-seokane.jpg)"
     ]
   }
 }
