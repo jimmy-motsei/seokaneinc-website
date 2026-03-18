@@ -158,3 +158,255 @@ export const office = {
   email: "city@seokaneinc.co.za",
   hours: "Monday to Friday, 08:00 - 17:00",
 };
+
+/* ─── Blog Articles ──────────────────────────────────────────── */
+
+export type Article = {
+  slug: string;
+  date: string;
+  dateISO: string;
+  tag: string;
+  practiceSlug: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  readTime: string;
+  author: string;
+  body: string;
+};
+
+export const articles: Article[] = [
+  /* ── Commercial Litigation ── */
+  {
+    slug: "navigating-commercial-disputes-south-africa",
+    date: "14 January 2026",
+    dateISO: "2026-01-14",
+    tag: "Commercial Litigation",
+    practiceSlug: "commercial-litigation",
+    title: "Navigating Commercial Disputes in South Africa: A Strategic Guide",
+    excerpt:
+      "When a commercial dispute arises, the decisions you make in the first days often determine the outcome. Here is how to approach it strategically.",
+    image: "/images/hero-practice-commercial-litigation.jpg",
+    readTime: "5 min read",
+    author: "City Seokane",
+    body: `
+      <p>Commercial disputes are a fact of doing business. Whether it is a breach of contract, an unpaid debt, or a partnership breakdown, how you respond in the early stages will often determine whether you resolve the matter quickly or spend years in litigation.</p>
+      <h2>Start with a Clear Legal Assessment</h2>
+      <p>Before you send a demand letter or instruct attorneys to issue summons, you need a clear-eyed assessment of your legal position. This means understanding your contractual rights, the strength of your evidence, the probable defences your opponent will raise, and a realistic view of the likely outcome. A poor legal position aggressively pursued rarely produces good results.</p>
+      <h2>Consider Your Commercial Objectives</h2>
+      <p>Not every dispute is best resolved through litigation. Sometimes a negotiated settlement, even on less favourable terms, is the right commercial outcome — particularly where you have an ongoing business relationship with the other party, or where the cost and disruption of litigation outweighs the value in dispute. Your attorney should understand both the legal and commercial dimensions of the matter.</p>
+      <h2>Preserve Your Evidence Early</h2>
+      <p>Evidence deteriorates. Emails are deleted, witnesses forget, and documents are misfiled. From the moment a dispute becomes likely, preserve all relevant correspondence, contracts, invoices, and internal communications. If you anticipate that the other party may destroy evidence, an urgent application to court for a preservation order may be appropriate.</p>
+      <h2>Know When to Use Urgency</h2>
+      <p>South African courts provide for urgent applications where immediate relief is necessary to prevent irreparable harm. If a competitor is using your confidential information, a debtor is dissipating assets, or a contractual right is being infringed in real time, urgent relief may be available. Acting quickly and correctly in these situations can make the difference between protecting your interests and suffering a loss that cannot be undone.</p>
+      <p>If you are facing a commercial dispute and need guidance on your options, contact Seokane Inc. for a confidential consultation.</p>
+    `,
+  },
+  {
+    slug: "urgent-interdict-applications-explained",
+    date: "8 December 2025",
+    dateISO: "2025-12-08",
+    tag: "Commercial Litigation",
+    practiceSlug: "commercial-litigation",
+    title: "Urgent Interdict Applications: When Speed Matters",
+    excerpt:
+      "An urgent interdict can stop wrongful conduct in its tracks — but only if you act correctly and quickly. Understanding the requirements is essential.",
+    image: "/images/attorneys-consultation.jpg",
+    readTime: "4 min read",
+    author: "Modiegi Mafalo",
+    body: `
+      <p>When someone is acting in a way that is causing you immediate and ongoing harm, the law provides a powerful remedy: the urgent interdict. But obtaining one requires satisfying the court on multiple requirements, and getting it wrong can result in a costly failure at a critical moment.</p>
+      <h2>The Requirements for an Urgent Interdict</h2>
+      <p>South African courts apply a well-established test when considering urgent interdict applications. You must demonstrate: (1) a clear right or prima facie right that is being threatened or infringed; (2) a reasonable apprehension of irreparable harm if the interdict is not granted; (3) the balance of convenience favours granting the order; and (4) there is no other adequate remedy available.</p>
+      <h2>What Makes a Matter Truly Urgent</h2>
+      <p>Courts take a dim view of manufactured urgency. A matter is urgent when the applicant would not be able to obtain substantial redress in the ordinary course if forced to wait for a hearing in due course. This typically means the harm is imminent or already ongoing, and a delay of weeks or months would result in harm that cannot subsequently be remedied — for example, the destruction of evidence, the dissipation of assets, or the disclosure of trade secrets.</p>
+      <h2>The Practical Steps</h2>
+      <p>Moving an urgent application requires rapid preparation of a founding affidavit setting out the facts, a clear and concise legal argument, and a draft order precisely defining the relief sought. The papers must be served on the respondent, who typically has an opportunity to oppose — though the urgency of the matter will determine how much time they are given. Getting the papers right under time pressure is where experienced litigation counsel makes a material difference.</p>
+      <p>If you believe you have a matter requiring urgent court intervention, contact our litigation team immediately to discuss your options.</p>
+    `,
+  },
+
+  /* ── Corporate & Commercial ── */
+  {
+    slug: "shareholder-agreements-why-every-business-needs-one",
+    date: "28 January 2026",
+    dateISO: "2026-01-28",
+    tag: "Corporate & Commercial",
+    practiceSlug: "corporate-commercial",
+    title: "Shareholder Agreements: Why Every Business Needs One",
+    excerpt:
+      "A shareholder agreement is the legal foundation of your business relationship. Without one, disputes can become expensive and uncontrollable.",
+    image: "/images/hero-practice-corporate-commercial.jpg",
+    readTime: "5 min read",
+    author: "City Seokane",
+    body: `
+      <p>Two business partners launch a company together. Things go well for a few years. Then one wants to bring in a new investor the other disagrees with. Or one wants to sell their shares to a competitor. Or one stops contributing but refuses to be bought out. Without a shareholder agreement, each of these situations can become an expensive, damaging dispute with no clear road map for resolution.</p>
+      <h2>What a Shareholder Agreement Does</h2>
+      <p>A shareholder agreement sits alongside your memorandum of incorporation and governs the relationship between shareholders. It deals with matters that the Companies Act and MOI either do not address or address inadequately for your specific business context — including decision-making thresholds, share transfer restrictions, dividend policy, dispute resolution mechanisms, and what happens when a shareholder wants to exit or dies.</p>
+      <h2>Key Provisions Every Agreement Should Include</h2>
+      <p>Well-drafted shareholder agreements address the following: pre-emptive rights (requiring a selling shareholder to offer shares to existing shareholders before selling to outsiders); tag-along and drag-along rights (protecting minority shareholders or enabling majority shareholders to complete a sale); deadlock resolution mechanisms; restraints of trade; and clearly defined processes for valuing shares when a shareholder exits. The right provisions depend on the nature and size of the business and the specific relationship between the shareholders.</p>
+      <h2>When to Get One</h2>
+      <p>The best time to conclude a shareholder agreement is before or at the time of incorporation. Once a business is established and relationships are established, negotiating the agreement becomes more complicated — parties have more to argue about, and entrenched positions make agreement harder. Getting it right at the start is far less expensive and disruptive than dealing with a shareholder dispute later.</p>
+      <p>Contact Seokane Inc. to discuss a shareholder agreement tailored to your business structure and objectives.</p>
+    `,
+  },
+  {
+    slug: "commercial-contracts-common-drafting-mistakes",
+    date: "15 November 2025",
+    dateISO: "2025-11-15",
+    tag: "Corporate & Commercial",
+    practiceSlug: "corporate-commercial",
+    title: "Five Common Mistakes in Commercial Contracts",
+    excerpt:
+      "Poorly drafted contracts create uncertainty, enable disputes, and expose your business to risk. Here are the mistakes we see most often — and how to avoid them.",
+    image: "/images/hero-about.jpg",
+    readTime: "4 min read",
+    author: "Modiegi Mafalo",
+    body: `
+      <p>A commercial contract should clearly allocate rights, obligations, and risk between the parties. When it fails to do that — because it is poorly drafted, copied from a template without adaptation, or rushed through without legal review — it becomes a liability rather than a protection.</p>
+      <h2>1. Vague Scope of Work or Deliverables</h2>
+      <p>The most common source of contract disputes is ambiguity about what was actually agreed. What exactly is the service provider obligated to deliver? By when? To what standard? Contracts that use loose language like "reasonable efforts" or "as agreed" without further specification are invitations to dispute. Be specific and concrete about deliverables, timescales, and quality standards.</p>
+      <h2>2. No Payment Terms or Unclear Invoicing Provisions</h2>
+      <p>When is payment due? From the date of the invoice? From the date the invoice is received? From the date the goods are delivered? In what currency? What is the interest rate on late payments? These details matter, and leaving them vague or absent creates leverage for the other party to delay payment.</p>
+      <h2>3. Missing or Inadequate Limitation of Liability Clauses</h2>
+      <p>Without a limitation of liability clause, your exposure in the event of a breach or failure could be unlimited — including consequential losses that far exceed the value of the contract. South African courts will enforce properly drafted limitation clauses. Make sure they are in your standard agreements.</p>
+      <h2>4. Inadequate Termination and Exit Provisions</h2>
+      <p>How does either party exit the contract if things go wrong? What constitutes a material breach that entitles termination? Is there a cure period? What are the consequences of termination — do obligations survive? Contracts that are silent on termination can trap parties in relationships that are no longer working.</p>
+      <h2>5. Incorrect Governing Law and Dispute Resolution</h2>
+      <p>For South African businesses contracting with foreign parties, specifying governing law and the forum for disputes is critical. But even in domestic contracts, specifying whether disputes go to mediation, arbitration, or court — and in which jurisdiction — avoids arguments about process later. Contact us to review your standard contracts and close the gaps before a dispute arises.</p>
+    `,
+  },
+
+  /* ── Employment & Labour ── */
+  {
+    slug: "ccma-disputes-what-employers-need-to-know",
+    date: "5 February 2026",
+    dateISO: "2026-02-05",
+    tag: "Employment & Labour",
+    practiceSlug: "employment-labour",
+    title: "CCMA Disputes: What Employers Need to Know",
+    excerpt:
+      "A CCMA referral is not the end of the world — but only if you handle it correctly from the start. Here is what employers need to understand.",
+    image: "/images/hero-practice-employment-labour.jpg",
+    readTime: "5 min read",
+    author: "City Seokane",
+    body: `
+      <p>When an employee refers a dispute to the Commission for Conciliation, Mediation and Arbitration, many employers treat it as a minor irritation. It is not. A poorly handled CCMA matter can result in an award of compensation, reinstatement, and costs that damage your business and your reputation as an employer.</p>
+      <h2>The Referral Process</h2>
+      <p>An employee has 30 days from the date of dismissal (or the date on which the employee became aware of the dismissal) to refer an unfair dismissal dispute to the CCMA. For unfair labour practice disputes, the period is 90 days. Missing a referral deadline can bar an employee from pursuing the dispute, but employers should not rely on this — focus on getting the substantive process right.</p>
+      <h2>Conciliation: The First Stage</h2>
+      <p>All disputes must go through conciliation before proceeding to arbitration. At conciliation, a CCMA commissioner attempts to facilitate a settlement between the parties. Conciliation is confidential, and anything said during the process is without prejudice. Many matters settle at this stage. Employers should arrive at conciliation with a clear understanding of their legal position and a realistic settlement mandate.</p>
+      <h2>Arbitration: If Conciliation Fails</h2>
+      <p>If conciliation fails, the dispute proceeds to arbitration, where a commissioner hears evidence and arguments from both parties and makes a binding award. This is a formal process that requires preparation — witness statements, documentary evidence, and a clear legal argument. The employer bears the onus to prove that the dismissal was both substantively and procedurally fair.</p>
+      <h2>The Importance of Procedure</h2>
+      <p>Even where a dismissal is substantively justified — where an employee genuinely committed misconduct or was genuinely incapable — a dismissal can be found procedurally unfair if the correct process was not followed. A fair disciplinary hearing, adequate notice, and a genuine opportunity to respond are not optional formalities. Get the process right from the beginning, before a referral is lodged.</p>
+      <p>Our employment team assists employers with CCMA representation and pre-dispute process design. Contact us to discuss your matter.</p>
+    `,
+  },
+  {
+    slug: "retrenchment-process-south-africa",
+    date: "22 October 2025",
+    dateISO: "2025-10-22",
+    tag: "Employment & Labour",
+    practiceSlug: "employment-labour",
+    title: "The Retrenchment Process in South Africa: A Step-by-Step Guide",
+    excerpt:
+      "Retrenchment is one of the most legally fraught processes in South African employment law. Getting the steps right protects your business from costly disputes.",
+    image: "/images/hero-attorney.jpg",
+    readTime: "6 min read",
+    author: "Modiegi Mafalo",
+    body: `
+      <p>Retrenchment — the dismissal of employees for operational requirements — is permitted by the Labour Relations Act, but only if the employer follows a specific, detailed process. Failing to follow that process correctly, even if the business justification is sound, can result in findings of procedurally unfair dismissal and significant compensation awards.</p>
+      <h2>Step 1: Confirm the Operational Justification</h2>
+      <p>Retrenchment must be based on genuine operational requirements — economic, technological, structural, or similar needs of the business. It cannot be used as a disguised disciplinary measure or as a way to target specific employees. Before initiating a retrenchment process, ensure the justification is real, documented, and defensible.</p>
+      <h2>Step 2: Issue a Section 189 or 189A Notice</h2>
+      <p>The process begins with a written notice to affected employees (and any representative trade union) in terms of section 189 of the LRA. This notice must disclose specific information — including the reasons for the proposed retrenchments, the alternatives considered, the number and categories of employees affected, and the proposed severance pay. The content of this notice is prescribed by law; an inadequate notice can invalidate the entire process.</p>
+      <h2>Step 3: Meaningful Consultation</h2>
+      <p>The employer must consult with affected employees or their representatives with a view to reaching agreement on measures to avoid or minimise retrenchments, and on severance pay and selection criteria. The consultation must be genuine and meaningful — it cannot be a rubber-stamping exercise. Courts scrutinise the quality of consultation closely.</p>
+      <h2>Step 4: Selection Criteria</h2>
+      <p>Where not all employees in a particular category are being retrenched, the selection criteria must be fair and objective — typically LIFO (last in, first out), skills, or agreed criteria. Applying selection criteria that appear neutral but disproportionately affect a protected class of employees can attract claims of unfair discrimination.</p>
+      <h2>Step 5: Severance Pay and Post-Retrenchment Obligations</h2>
+      <p>Employees retrenched for operational requirements are entitled to severance pay of at least one week's remuneration per completed year of service (unless a more favourable entitlement applies). Employers must also issue correct UIF documentation and pay out all outstanding leave and notice pay. Contact us before initiating any retrenchment process to ensure you get every step right.</p>
+    `,
+  },
+
+  /* ── Estates & Trusts ── */
+  {
+    slug: "deceased-estate-administration-what-to-expect",
+    date: "3 December 2025",
+    dateISO: "2025-12-03",
+    tag: "Estates & Trusts",
+    practiceSlug: "estates-trusts",
+    title: "Deceased Estate Administration: What to Expect",
+    excerpt:
+      "Administering a deceased estate involves more steps than most people realise. Understanding the process helps families navigate a difficult time with clarity.",
+    image: "/images/hero-practice-estates-trusts.jpg",
+    readTime: "5 min read",
+    author: "Tshadi Lefakane",
+    body: `
+      <p>When a person dies, their estate must be administered and distributed in accordance with their will (if there is one) or the Intestate Succession Act (if there is not). The process is regulated by the Administration of Estates Act and involves several formal steps — many of which take time and require careful attention to avoid delays or legal complications.</p>
+      <h2>Reporting the Estate</h2>
+      <p>The first step is reporting the deceased estate to the Master of the High Court. This must be done within 14 days of the date of death by the person who has custody of the will or who is responsible for the funeral. The Master's office is located in the jurisdiction where the deceased was ordinarily resident at the time of death. Failure to report timeously can result in delays and, in some cases, penalties.</p>
+      <h2>Appointment of the Executor</h2>
+      <p>The Master appoints an executor to administer the estate. If the deceased left a valid will, the nominated executor is usually appointed. Where the executor is not a registered professional (such as an attorney), the Master may require them to provide security — typically a bond of security — before letters of executorship are issued. The executor's powers arise only once the letters of executorship have been issued.</p>
+      <h2>Liquidation and Distribution Account</h2>
+      <p>The executor must prepare a liquidation and distribution account showing all assets, liabilities, and the proposed distribution of the estate. This account is submitted to the Master and must lie open for inspection for 21 days. Creditors and heirs may object to the account. Once the account is approved, the executor distributes the estate in accordance with it.</p>
+      <h2>Timeframes and Practical Considerations</h2>
+      <p>Estate administration is rarely quick. Complex estates — those involving businesses, trusts, foreign assets, or disputed claims — can take two or more years to finalise. Engaging an experienced attorney as executor or as support for a lay executor reduces delays, minimises disputes, and protects the interests of all beneficiaries. Contact us to discuss the administration of a deceased estate.</p>
+    `,
+  },
+
+  /* ── Business Compliance ── */
+  {
+    slug: "cipc-annual-returns-what-companies-need-to-know",
+    date: "18 February 2026",
+    dateISO: "2026-02-18",
+    tag: "Business Compliance",
+    practiceSlug: "business-compliance",
+    title: "CIPC Annual Returns: What Companies Need to Know",
+    excerpt:
+      "CIPC annual returns are a basic but non-negotiable compliance requirement. Missing the deadline has real consequences for your company's standing.",
+    image: "/images/hero-practice-business-compliance.png",
+    readTime: "4 min read",
+    author: "Tshadi Lefakane",
+    body: `
+      <p>Every company and close corporation registered with the Companies and Intellectual Property Commission is required to file an annual return. This is not a tax filing — it is a statutory compliance requirement under the Companies Act, 2008. The obligation applies whether or not the company is trading, and failure to comply can result in your company being deregistered.</p>
+      <h2>When Must Annual Returns Be Filed?</h2>
+      <p>Annual returns must be filed within 30 business days after the anniversary of the company's incorporation date. For close corporations, the deadline is within 30 business days after the anniversary of the end of the financial year. CIPC sends reminder notices, but it is the company's responsibility to ensure compliance — the reminder is a courtesy, not a condition.</p>
+      <h2>What Does Filing Involve?</h2>
+      <p>The annual return is filed online through the CIPC e-services portal. It requires confirmation of the company's registered information, payment of the prescribed annual return fee (which is based on the company's turnover), and — for companies that meet certain thresholds — submission of annual financial statements. Ensure your company's registered address, director details, and other statutory information are accurate before filing.</p>
+      <h2>Consequences of Non-Compliance</h2>
+      <p>A company that fails to file its annual return will be flagged as non-compliant by CIPC. After two consecutive years of non-compliance, CIPC will begin the deregistration process. A deregistered company loses its legal standing and its directors can become personally liable for the company's obligations. Reinstatement is possible but involves cost, delay, and administrative complexity.</p>
+      <h2>Keeping Your Compliance Current</h2>
+      <p>Annual returns are one part of a broader compliance picture. Directors also need to ensure that changes to directors, registered addresses, and share capital are notified to CIPC promptly. Our company secretarial team can manage your CIPC compliance on your behalf. Contact us to discuss a compliance support arrangement for your business.</p>
+    `,
+  },
+  {
+    slug: "company-secretarial-services-why-they-matter",
+    date: "12 September 2025",
+    dateISO: "2025-09-12",
+    tag: "Business Compliance",
+    practiceSlug: "business-compliance",
+    title: "Company Secretarial Services: Why They Matter for Your Business",
+    excerpt:
+      "Company secretarial work is often treated as administrative overhead. In reality, it is the foundation of your company's legal integrity — and neglecting it has consequences.",
+    image: "/images/hero-sme.png",
+    readTime: "4 min read",
+    author: "City Seokane",
+    body: `
+      <p>When businesses think about legal risk, they typically think about contracts, disputes, and regulatory investigations. Rarely do they think about company secretarial compliance — until something goes wrong. A company that has failed to maintain its statutory records, file required notices, or properly document its board decisions is a company with hidden legal exposure.</p>
+      <h2>What Company Secretarial Work Covers</h2>
+      <p>Company secretarial services encompass the full range of statutory compliance obligations under the Companies Act, 2008: CIPC registrations and amendments, director and shareholder changes, maintaining the statutory register of members and directors, preparing and filing annual returns, drafting board and shareholder resolutions, and ensuring that governance decisions are properly documented. For companies with more complex structures — holding companies, trusts, multiple classes of shares — the work is more substantial.</p>
+      <h2>Why It Cannot Be Left to Chance</h2>
+      <p>Statutory records that are out of date or inaccurate create real problems. A director who is still registered at CIPC after resigning remains potentially liable for company obligations. A share register that does not reflect actual ownership creates disputes about who controls the company. A board resolution that was never properly documented may be challenged as invalid. These are not theoretical risks — they arise regularly in practice, particularly during transactions, disputes, and due diligence processes.</p>
+      <h2>The Cost of Getting It Wrong</h2>
+      <p>The consequences of poor company secretarial compliance range from practical delays (a transaction cannot proceed because the company's records are inconsistent) to legal exposure (personal liability for directors, or the company being placed in deregistration). Bringing statutory records up to date after years of neglect is time-consuming and more expensive than staying current in the first place.</p>
+      <h2>How We Can Help</h2>
+      <p>Seokane Inc. provides company secretarial support as a standalone service for SMEs and growing businesses. Whether you need a once-off CIPC filing, a full statutory records review, or an ongoing company secretarial arrangement, we can help. Contact us to discuss what your business needs.</p>
+    `,
+  },
+];
+
+export const recentArticles: Article[] = [...articles]
+  .sort((a, b) => b.dateISO.localeCompare(a.dateISO))
+  .slice(0, 3);

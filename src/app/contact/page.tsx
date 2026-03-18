@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PlaceholderImage } from "@/components/site/PlaceholderImage";
 import { SitePage } from "@/components/site/SiteChrome";
+import { ContactForm } from "@/components/site/ContactForm";
 import { office } from "@/content/site-content";
 
 export const metadata: Metadata = {
@@ -60,86 +61,7 @@ export default function ContactPage() {
             </p>
           </article>
 
-          <form className="card-base space-y-4" action="#" method="post">
-            <div>
-              <label htmlFor="name" className="mb-2 block text-sm font-semibold text-navy-dark">
-                Full Name
-              </label>
-              <input
-                id="name"
-                name="name"
-                required
-                className="w-full border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="mb-2 block text-sm font-semibold text-navy-dark">
-                Email Address
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="w-full border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="mb-2 block text-sm font-semibold text-navy-dark">
-                Phone Number
-              </label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                className="w-full border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
-              />
-            </div>
-            <div>
-              <label htmlFor="subject" className="mb-2 block text-sm font-semibold text-navy-dark">
-                Matter Type
-              </label>
-              <select
-                id="subject"
-                name="subject"
-                required
-                className="w-full border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none bg-white"
-              >
-                <option value="">Select a practice area</option>
-                <option value="commercial-litigation">Commercial Litigation</option>
-                <option value="corporate-commercial">Corporate &amp; Commercial</option>
-                <option value="employment-labour">Employment &amp; Labour</option>
-                <option value="estates-trusts">Estates &amp; Trusts</option>
-                <option value="business-compliance">Business Compliance</option>
-                <option value="sme-services">SME Services</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div>
-              <label htmlFor="message" className="mb-2 block text-sm font-semibold text-navy-dark">
-                Brief Description
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={5}
-                required
-                className="w-full border border-surface-dark px-4 py-3 focus:border-amber focus:outline-none"
-              />
-            </div>
-            <input type="text" name="company_website" tabIndex={-1} autoComplete="off" className="hidden" />
-            <button type="submit" className="btn-primary">
-              Send Inquiry
-            </button>
-            <p className="text-sm text-ink-muted">
-              We aim to respond within one business day. If your matter is urgent, please
-              call us directly on{" "}
-              <a href="tel:+27110522817" className="text-navy hover:text-amber transition-colors">
-                +27 (0)11 052 2817
-              </a>
-              .
-            </p>
-          </form>
+          <ContactForm />
         </div>
       </section>
 

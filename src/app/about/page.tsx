@@ -94,6 +94,67 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section-padding-sm bg-white">
+        <div className="container-site">
+          <p className="eyebrow mb-3">Affiliates</p>
+          <h2 className="text-3xl mb-8">Bouverie Attorneys</h2>
+
+          <div className="border-l-4 border-[var(--color-amber)] pl-6 py-2">
+            <div className="grid gap-8 lg:grid-cols-2">
+              <div>
+                <p className="text-sm font-semibold text-[var(--color-amber)] uppercase tracking-wide mb-1">
+                  Affiliate Firm
+                </p>
+                <p className="text-lg font-semibold text-[var(--color-navy-dark)] mb-1">Bouverie Attorneys</p>
+                <p className="text-sm text-[var(--color-ink-muted)] mb-4">Bramley, Johannesburg</p>
+                <p className="text-sm text-[var(--color-ink-muted)] mb-1">
+                  <span className="font-medium text-[var(--color-ink)]">Director:</span>{" "}
+                  Jeanette Bouverie — practising since 2006
+                </p>
+                <div className="mt-4 space-y-2 text-sm">
+                  <a
+                    href="mailto:jeanette@bouverieattorneys.co.za"
+                    className="flex items-center gap-2 text-[var(--color-ink-muted)] hover:text-[var(--color-navy)] transition-colors"
+                  >
+                    <svg className="h-4 w-4 shrink-0 text-[var(--color-amber)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
+                      <rect x="2" y="4" width="20" height="16" rx="2"/>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    jeanette@bouverieattorneys.co.za
+                  </a>
+                  <a
+                    href="tel:+27114409398"
+                    className="flex items-center gap-2 text-[var(--color-ink-muted)] hover:text-[var(--color-navy)] transition-colors"
+                  >
+                    <svg className="h-4 w-4 shrink-0 text-[var(--color-amber)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    +27 (0)11 440 9398
+                  </a>
+                </div>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[var(--color-ink)] mb-3">Services</p>
+                <ul className="space-y-1.5 text-sm text-[var(--color-ink-muted)]">
+                  {[
+                    "Property transfers and conveyancing",
+                    "Immigration advice",
+                    "Notary services",
+                    "Ante-nuptial agreements",
+                    "Residence and work permits",
+                  ].map((service) => (
+                    <li key={service} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-amber)]" aria-hidden="true" />
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding-sm bg-navy text-white">
         <div className="container-site text-center">
           <p className="eyebrow text-amber-light">Next Step</p>

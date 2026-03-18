@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Scale, Users, TrendingUp, Briefcase, ChevronRight, Play, Quote, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Scale, Users, TrendingUp, Briefcase, ChevronRight, Play, Quote, ArrowRight, Clock, Calendar } from "lucide-react";
 import { SitePage } from "@/components/site/SiteChrome";
 import { PlaceholderImage } from "@/components/site/PlaceholderImage";
-import { practiceAreas, teamMembers } from "@/content/site-content";
+import { NewsletterWidget } from "@/components/site/NewsletterWidget";
+import { Stagger, StaggerItem } from "@/components/site/Animations";
+import { practiceAreas, teamMembers, recentArticles } from "@/content/site-content";
 
 export const metadata: Metadata = {
   title: "Seokane Inc. | Strategic Legal Counsel for Growing Businesses",
@@ -396,7 +399,77 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 7. FAQ ─────────────────────────────────────────────── */}
+      {/* ── 7. LATEST ARTICLES ─────────────────────────────────── */}
+      <section className="section-padding bg-[var(--color-surface)]">
+        <div className="container-site">
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <p className="eyebrow mb-3">Legal Insights</p>
+              <h2 className="text-4xl xl:text-5xl">Latest from the Firm</h2>
+            </div>
+            <Link
+              href="/blog"
+              aria-label="View all articles"
+              className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-navy)] hover:text-[var(--color-amber)] transition-colors"
+            >
+              View all
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+
+          <Stagger className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {recentArticles.map((article) => (
+              <StaggerItem key={article.slug} as="article">
+                <Link href={`/blog/${article.slug}`} className="group block h-full">
+                  <div className="relative overflow-hidden mb-4 h-52">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute top-3 left-3 bg-[var(--color-navy-dark)]/80 px-2.5 py-1 backdrop-blur-sm">
+                      <span className="text-[10px] font-semibold uppercase tracking-widest text-[var(--color-amber)]">
+                        {article.tag}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 mb-2 text-xs text-[var(--color-ink-muted)]">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="h-3 w-3" aria-hidden="true" />
+                      {article.date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" aria-hidden="true" />
+                      {article.readTime}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[var(--color-navy-dark)] group-hover:text-[var(--color-navy)] transition-colors leading-snug mb-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-[var(--color-ink-muted)] leading-relaxed line-clamp-2">
+                    {article.excerpt}
+                  </p>
+                  <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-cta)] group-hover:gap-2.5 transition-all">
+                    Read article
+                    <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                  </span>
+                </Link>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* ── 8. NEWSLETTER ──────────────────────────────────────── */}
+      <section className="section-padding-sm">
+        <div className="container-site">
+          <NewsletterWidget variant="dark" />
+        </div>
+      </section>
+
+      {/* ── 9. FAQ ─────────────────────────────────────────────── */}
       <section className="section-padding bg-[var(--color-surface)]">
         <div className="container-site grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
 

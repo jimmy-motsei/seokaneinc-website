@@ -26,6 +26,9 @@
   --color-ink:          #1c2b30;  /* Midnight Navy for text */
   --color-ink-muted:    #6b7a8d;  /* Muted gray-blue  */
   --color-white:        #ffffff;
+  --color-cta:          #2d6cdf;  /* CTA Blue — btn-primary */
+  --color-cta-dark:     #1f5abf;  /* CTA Blue hover */
+  --color-ink-faint:    #b0bac7;  /* Very light text / placeholders */
 
   /* Typography — loaded via next/font in layout.tsx */
   --font-body: "Manrope", system-ui, sans-serif;
@@ -65,6 +68,9 @@
   --color-ink:               var(--color-ink);
   --color-ink-muted:         var(--color-ink-muted);
   --color-white:             var(--color-white);
+  --color-cta:               var(--color-cta);
+  --color-cta-dark:          var(--color-cta-dark);
+  --color-ink-faint:         var(--color-ink-faint);
   --font-sans:               var(--font-body);
   --font-serif:              var(--font-display);
   --font-display:            var(--font-display);
@@ -239,6 +245,38 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.875rem 2rem;
+    background-color: var(--color-cta);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 0.125rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition:
+      background-color var(--transition-base),
+      box-shadow var(--transition-base),
+      transform var(--transition-base);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-cta-dark);
+    box-shadow: 0 4px 16px rgb(45 108 223 / 40%);
+    transform: translateY(-1px);
+    color: var(--color-white);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  /* Amber variant — use on light backgrounds where orange CTA is preferred */
+  .btn-primary-amber {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
     background-color: var(--color-amber);
     color: var(--color-navy-dark);
     font-family: var(--font-body);
@@ -254,14 +292,14 @@
       transform var(--transition-base);
   }
 
-  .btn-primary:hover {
+  .btn-primary-amber:hover {
     background-color: var(--color-amber-dark);
-    box-shadow: 0 4px 16px rgb(245 166 35 / 40%);
+    box-shadow: 0 4px 16px rgb(231 128 52 / 40%);
     transform: translateY(-1px);
     color: var(--color-navy-dark);
   }
 
-  .btn-primary:active {
+  .btn-primary-amber:active {
     transform: translateY(0);
   }
 
@@ -423,5 +461,89 @@
   .practice-item-active {
     padding-left: 1rem;
     border-left: 3px solid var(--color-amber);
+  }
+
+  /* ─── Article body prose ─────────────────────────────────────
+     Applied to dangerouslySetInnerHTML content in blog articles.
+     ─────────────────────────────────────────────────────────── */
+  .prose-article p {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.8;
+    color: var(--color-ink-muted);
+    margin-bottom: 1.5rem;
+    max-width: 70ch;
+  }
+
+  .prose-article h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: var(--color-navy-dark);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .prose-article h3 {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-navy-dark);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose-article ul,
+  .prose-article ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-ink-muted);
+  }
+
+  .prose-article li {
+    margin-bottom: 0.5rem;
+    line-height: 1.75;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+  }
+
+  .prose-article strong {
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+
+  .prose-article a {
+    color: var(--color-cta);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .prose-article a:hover {
+    color: var(--color-cta-dark);
+  }
+
+  /* ─── Image overlays ─────────────────────────────────────── */
+
+  /* Subtle tint — team cards, gallery thumbnails */
+  .img-overlay-tint {
+    position: absolute;
+    inset: 0;
+    background: rgb(28 43 48 / 20%);
+  }
+
+  /* Hero overlay — full-width article / page heroes */
+  .img-overlay-hero {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgb(12 22 40 / 85%) 0%, rgb(12 22 40 / 35%) 55%, transparent 100%);
+  }
+
+  /* Banner overlay — CTA or newsletter backgrounds */
+  .img-overlay-banner {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 50%, rgb(27 46 72 / 80%) 0%, transparent 60%),
+      rgb(12 22 40 / 65%);
   }
 }
