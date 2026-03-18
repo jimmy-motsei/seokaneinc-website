@@ -191,7 +191,7 @@ export default function ArticlePage({ params }: { params: PageParams }) {
       </section>
 
       {/* ── Newsletter ────────────────────────────────────────── */}
-      <NewsletterWidget isDark />
+      <NewsletterWidget variant="dark" />
 
       {/* ── Prev / Next navigation ────────────────────────────── */}
       {(prevArticle || nextArticle) && (
