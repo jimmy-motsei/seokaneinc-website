@@ -373,12 +373,12 @@ export default function HomePage() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((member) => (
               <article key={member.name} className="group">
-                <div className="overflow-hidden mb-4 relative h-72 w-full">
+                <div className="overflow-hidden mb-4 relative h-80 w-full">
                   <Image
                     src={teamImages[member.name] ?? "/images/team-city-seokane.jpg"}
                     alt={`Photo of ${member.name}`}
                     fill
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-[center_15%] transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="img-overlay-tint" aria-hidden="true" />
