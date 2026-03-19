@@ -246,7 +246,7 @@ export default function HomePage() {
                   <Icon className={`h-5 w-5 flex-shrink-0 ${isFirst ? "text-white" : "text-[var(--color-navy-dark)]"}`} aria-hidden="true" />
                   <div>
                     <h3 className={`text-base font-semibold mb-1.5 ${isFirst ? "text-white" : ""}`}>{title}</h3>
-                    <p className={`text-xs leading-relaxed line-clamp-5 ${isFirst ? "text-white/65" : "text-[var(--color-ink-muted)]"}`}>{body}</p>
+                    <p className={`text-xs leading-relaxed ${isFirst ? "text-white/65" : "text-[var(--color-ink-muted)]"}`}>{body}</p>
                   </div>
                 </article>
               );

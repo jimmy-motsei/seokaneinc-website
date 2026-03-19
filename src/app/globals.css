@@ -470,12 +470,11 @@
     border-radius: 0;
     padding: 2rem;
     box-shadow: 0 1px 8px rgb(13 21 48 / 6%);
-    align-self: start;
-    overflow: hidden;
+    align-self: stretch;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: flex-start;
+    gap: 1.25rem;
     transition:
       box-shadow var(--transition-slow),
       transform var(--transition-slow);
@@ -488,9 +487,7 @@
 
   @media (min-width: 640px) {
     .feature-card {
-      aspect-ratio: 1 / 1;
       padding: 2.5rem;
-      gap: 0;
     }
   }
 
