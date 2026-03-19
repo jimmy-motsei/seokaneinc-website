@@ -2,19 +2,21 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import DOMPurify from "isomorphic-dompurify";
 import { Clock, Calendar, ArrowLeft, ArrowRight, Tag } from "lucide-react";
 import { SitePage } from "@/components/site/SiteChrome";
 import { NewsletterWidget } from "@/components/site/NewsletterWidget";
-import { articles, practiceAreas } from "@/content/site-content";
+import { articles, practiceAreas, office } from "@/content/site-content";
 
-type PageParams = { slug: string };
+type PageParams = Promise<{ slug: string }>;
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
 
-export function generateMetadata({ params }: { params: PageParams }): Metadata {
-  const article = articles.find((a) => a.slug === params.slug);
+export async function generateMetadata({ params }: { params: PageParams }): Promise<Metadata> {
+  const { slug } = await params;
+  const article = articles.find((a) => a.slug === slug);
   if (!article) return { title: "Article | Seokane Inc." };
   return {
     title: `${article.title} | Seokane Inc.`,
@@ -22,14 +24,15 @@ export function generateMetadata({ params }: { params: PageParams }): Metadata {
   };
 }
 
-export default function ArticlePage({ params }: { params: PageParams }) {
-  const article = articles.find((a) => a.slug === params.slug);
+export default async function ArticlePage({ params }: { params: PageParams }) {
+  const { slug } = await params;
+  const article = articles.find((a) => a.slug === slug);
   if (!article) notFound();
 
   const sortedArticles = [...articles].sort((a, b) =>
     b.dateISO.localeCompare(a.dateISO)
   );
-  const currentIndex = sortedArticles.findIndex((a) => a.slug === params.slug);
+  const currentIndex = sortedArticles.findIndex((a) => a.slug === slug);
   const prevArticle =
     currentIndex < sortedArticles.length - 1
       ? sortedArticles[currentIndex + 1]
@@ -93,7 +96,7 @@ export default function ArticlePage({ params }: { params: PageParams }) {
           <div>
             <div
               className="prose-article"
-              dangerouslySetInnerHTML={{ __html: article.body }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.body) }}
             />
 
             {/* Back to blog link */}
@@ -125,10 +128,10 @@ export default function ArticlePage({ params }: { params: PageParams }) {
                 Schedule a Consultation
               </Link>
               <a
-                href="tel:+27110522817"
+                href={`tel:${office.phone.replace(/\s+/g, "")}`}
                 className="mt-3 flex items-center justify-center gap-2 text-sm text-white/50 hover:text-white/80 transition-colors"
               >
-                +27 (0)11 052 2817
+                {office.phone}
               </a>
             </div>
 

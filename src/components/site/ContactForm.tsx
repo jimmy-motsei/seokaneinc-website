@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Send, Loader2, CheckCircle, AlertCircle, Phone } from "lucide-react";
 import { submitContactForm } from "@/app/actions";
 import type { ContactResult } from "@/app/actions";
+import { office } from "@/content/site-content";
 
 const FIELD_CLASS =
   "w-full border border-[var(--color-surface-dark)] bg-white px-4 py-3 text-sm text-[var(--color-ink)] placeholder:text-[var(--color-ink-faint)] outline-none transition-colors focus:border-[var(--color-navy-muted)]";
@@ -42,8 +43,8 @@ export function ContactForm() {
         </p>
         <p className="text-sm text-[var(--color-ink-muted)] mb-8">
           If your matter is urgent, please call{" "}
-          <a href="tel:+27110522817" className="font-semibold text-[var(--color-navy)] hover:text-[var(--color-cta)] transition-colors">
-            +27 (0)11 052 2817
+          <a href={`tel:${office.phone.replace(/\s+/g, "")}`} className="font-semibold text-[var(--color-navy)] hover:text-[var(--color-cta)] transition-colors">
+            {office.phone}
           </a>{" "}directly.
         </p>
         <button onClick={() => { setResult(null); setFieldErrors({}); }}
@@ -124,8 +125,8 @@ export function ContactForm() {
         <Phone className="h-3.5 w-3.5 shrink-0 mt-0.5 text-[var(--color-ink-faint)]" aria-hidden="true" />
         <p className="text-xs text-[var(--color-ink-muted)] leading-relaxed">
           We aim to respond within one business day. Urgent matters:{" "}
-          <a href="tel:+27110522817" className="font-semibold text-[var(--color-navy)] hover:text-[var(--color-cta)] transition-colors">
-            +27 (0)11 052 2817
+          <a href={`tel:${office.phone.replace(/\s+/g, "")}`} className="font-semibold text-[var(--color-navy)] hover:text-[var(--color-cta)] transition-colors">
+            {office.phone}
           </a>. Your information is handled in accordance with our{" "}
           <Link href="/privacy" className="underline underline-offset-2 hover:text-[var(--color-ink)] transition-colors">
             Privacy Policy

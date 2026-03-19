@@ -5,22 +5,15 @@ import { notFound } from "next/navigation";
 import { SitePage } from "@/components/site/SiteChrome";
 import { practiceAreas } from "@/content/site-content";
 
-const practiceImages: Record<string, string> = {
-  "commercial-litigation":  "/images/hero-practice-commercial-litigation.jpg",
-  "corporate-commercial":   "/images/hero-practice-corporate-commercial.jpg",
-  "employment-labour":      "/images/hero-practice-employment-labour.jpg",
-  "estates-trusts":         "/images/hero-practice-estates-trusts.jpg",
-  "business-compliance":    "/images/hero-practice-business-compliance.png",
-};
-
-type PageParams = { slug: string };
+type PageParams = Promise<{ slug: string }>;
 
 export function generateStaticParams() {
   return practiceAreas.map((area) => ({ slug: area.slug }));
 }
 
-export function generateMetadata({ params }: { params: PageParams }): Metadata {
-  const area = practiceAreas.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: { params: PageParams }): Promise<Metadata> {
+  const { slug } = await params;
+  const area = practiceAreas.find((item) => item.slug === slug);
   if (!area) {
     return { title: "Practice Area | Seokane Incorporated" };
   }
@@ -31,8 +24,9 @@ export function generateMetadata({ params }: { params: PageParams }): Metadata {
   };
 }
 
-export default function PracticeAreaDetailPage({ params }: { params: PageParams }) {
-  const area = practiceAreas.find((item) => item.slug === params.slug);
+export default async function PracticeAreaDetailPage({ params }: { params: PageParams }) {
+  const { slug } = await params;
+  const area = practiceAreas.find((item) => item.slug === slug);
   if (!area) {
     notFound();
   }
@@ -48,7 +42,7 @@ export default function PracticeAreaDetailPage({ params }: { params: PageParams 
           </div>
           <div className="relative h-80 lg:h-full lg:min-h-[360px] overflow-hidden">
             <Image
-              src={practiceImages[area.slug] ?? "/images/attorneys-consultation.jpg"}
+              src={area.image}
               alt={`${area.title} — Seokane Inc.`}
               fill
               className="object-cover object-center"

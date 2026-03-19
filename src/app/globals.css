@@ -189,11 +189,20 @@
   }
 
   .section-padding {
-    padding-block: var(--space-section);
+    padding-block: 3.5rem;
   }
 
   .section-padding-sm {
-    padding-block: var(--space-section-sm);
+    padding-block: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-block: var(--space-section);
+    }
+    .section-padding-sm {
+      padding-block: var(--space-section-sm);
+    }
   }
 
   /* PlaceholderImage gradients — avoid long arbitrary values in JSX */
@@ -401,59 +410,72 @@
   .stat-card-dark {
     background-color: var(--color-navy);
     border-radius: 0;
-    padding: 2.5rem;
+    padding: 2rem;
     color: var(--color-white);
-    aspect-ratio: 1 / 1;
     align-self: start;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1.5rem;
+    transition:
+      box-shadow var(--transition-slow),
+      transform var(--transition-slow);
+  }
+
+  .stat-card-dark:hover {
+    box-shadow: 0 8px 32px rgb(13 21 48 / 12%);
+    transform: translateY(-2px);
+  }
+
+  @media (min-width: 640px) {
+    .stat-card-dark {
+      aspect-ratio: 1 / 1;
+      padding: 2.5rem;
+      gap: 0;
+    }
   }
 
   /* Stat card — light variant */
   .stat-card-light {
     background-color: var(--color-white);
     border-radius: 0;
-    padding: 2.5rem;
+    padding: 2rem;
     border: 1px solid var(--color-surface-dark);
-    aspect-ratio: 1 / 1;
     align-self: start;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    gap: 1.5rem;
+    transition:
+      box-shadow var(--transition-slow),
+      transform var(--transition-slow);
   }
 
   .stat-card-light:hover {
-    background-color: var(--color-navy);
-    border-color: var(--color-navy);
+    box-shadow: 0 8px 32px rgb(13 21 48 / 12%);
     transform: translateY(-2px);
   }
 
-  .stat-card-light:hover p {
-    color: rgb(255 255 255 / 0.8);
-  }
-
-  .stat-card-light:hover p:first-child {
-    color: var(--color-white);
-  }
-
-  .stat-card-light:hover p:last-child {
-    color: rgb(255 255 255 / 0.5);
+  @media (min-width: 640px) {
+    .stat-card-light {
+      aspect-ratio: 1 / 1;
+      padding: 2.5rem;
+      gap: 0;
+    }
   }
 
   /* Feature card — Why Choose Us */
   .feature-card {
     background-color: var(--color-white);
     border-radius: 0;
-    padding: 2.5rem;
+    padding: 2rem;
     box-shadow: 0 1px 8px rgb(13 21 48 / 6%);
-    aspect-ratio: 1 / 1;
     align-self: start;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1.5rem;
     transition:
       box-shadow var(--transition-slow),
       transform var(--transition-slow);
@@ -462,6 +484,14 @@
   .feature-card:hover {
     box-shadow: 0 8px 32px rgb(13 21 48 / 12%);
     transform: translateY(-2px);
+  }
+
+  @media (min-width: 640px) {
+    .feature-card {
+      aspect-ratio: 1 / 1;
+      padding: 2.5rem;
+      gap: 0;
+    }
   }
 
   /* Practice area numbered item */

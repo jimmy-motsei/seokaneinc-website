@@ -113,6 +113,12 @@ export async function subscribeToNewsletter(formData: FormData): Promise<Subscri
     return { status: "success" };
   }
 
+  // Validate env vars contain only expected characters before interpolating into URL
+  if (!/^[a-z0-9]+$/.test(server) || !/^[a-z0-9]+$/i.test(audienceId)) {
+    console.error("[Newsletter] Invalid MAILCHIMP env var format");
+    return { status: "error", message: "Configuration error. Please try again later." };
+  }
+
   try {
     const url = `https://${server}.api.mailchimp.com/3.0/lists/${audienceId}/members`;
     const res = await fetch(url, {

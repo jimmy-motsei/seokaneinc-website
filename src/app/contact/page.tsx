@@ -45,12 +45,12 @@ export default function ContactPage() {
             <ul role="list" className="mt-5 space-y-3 text-ink-muted">
               <li>{office.address}</li>
               <li>
-                <a href={`tel:${office.phone}`} className="hover:text-navy transition-colors">
+                <a href={`tel:${office.phone.replace(/[\s()]/g, "")}`} className="hover:text-navy transition-colors">
                   {office.phone}
                 </a>
               </li>
               <li>
-                <a href={`tel:${office.mobile}`} className="hover:text-navy transition-colors">
+                <a href={`tel:${office.mobile.replace(/[\s()]/g, "")}`} className="hover:text-navy transition-colors">
                   {office.mobile} (Mobile / WhatsApp)
                 </a>
               </li>

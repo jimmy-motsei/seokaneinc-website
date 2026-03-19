@@ -4,12 +4,6 @@ import Image from "next/image";
 import { SitePage } from "@/components/site/SiteChrome";
 import { teamMembers } from "@/content/site-content";
 
-const teamImages: Record<string, string> = {
-  "City Seokane":    "/images/team-city-seokane.jpg",
-  "Modiegi Mafalo":  "/images/team-modiegi-mafalo.jpg",
-  "Tshadi Lefakane": "/images/team-tshadi-lefakane.jpg",
-};
-
 export const metadata: Metadata = {
   title: "Our Team | Seokane Incorporated",
   description:
@@ -50,7 +44,7 @@ export default function TeamPage() {
             <article key={member.name} className="card-base">
               <div className="relative h-80 w-full overflow-hidden -mx-10 -mt-10 mb-6" style={{ width: "calc(100% + 5rem)" }}>
                 <Image
-                  src={teamImages[member.name] ?? "/images/team-city-seokane.jpg"}
+                  src={member.image}
                   alt={`Photo of ${member.name}`}
                   fill
                   className="object-cover object-[center_15%]"

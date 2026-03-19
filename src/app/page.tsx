@@ -5,7 +5,7 @@ import { Scale, Users, TrendingUp, Briefcase, ChevronRight, Play, Quote, ArrowRi
 import { SitePage } from "@/components/site/SiteChrome";
 import { NewsletterWidget } from "@/components/site/NewsletterWidget";
 import { Stagger, StaggerItem } from "@/components/site/Animations";
-import { practiceAreas, teamMembers, recentArticles } from "@/content/site-content";
+import { practiceAreas, teamMembers, recentArticles, office } from "@/content/site-content";
 
 export const metadata: Metadata = {
   title: "Seokane Inc. | Strategic Legal Counsel for Growing Businesses",
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "How do I schedule a consultation?",
     answer:
-      "Complete the contact form on our Contact page, call us on +27 (0)11 052 2817, or email city@seokaneinc.co.za. We aim to respond within one business day.",
+      `Complete the contact form on our Contact page, call us on ${office.phone}, or email ${office.email}. We aim to respond within one business day.`,
   },
   {
     question: "Do you work with small and medium-sized businesses?",
@@ -65,12 +65,6 @@ const faqs = [
   },
 ];
 
-const teamImages: Record<string, string> = {
-  "City Seokane":    "/images/team-city-seokane.jpg",
-  "Modiegi Mafalo":  "/images/team-modiegi-mafalo.jpg",
-  "Tshadi Lefakane": "/images/team-tshadi-lefakane.jpg",
-};
-
 export default function HomePage() {
   return (
     <SitePage>
@@ -79,7 +73,7 @@ export default function HomePage() {
       <section className="relative bg-[var(--color-navy-dark)] overflow-hidden">
 
         {/* Main hero row: text left, photo right-to-edge */}
-        <div className="flex min-h-[82vh] lg:min-h-[88vh]">
+        <div className="flex min-h-[60vh] lg:min-h-[88vh]">
 
           {/* Left: text content */}
           <div className="relative z-10 flex flex-col justify-center px-6 py-20 md:px-10 lg:w-[54%] lg:py-28 lg:pl-[max(2.5rem,calc((100vw-1280px)/2+2.5rem))] lg:pr-16">
@@ -87,7 +81,7 @@ export default function HomePage() {
               Boutique Corporate Law Firm · Est. 2001
             </span>
 
-            <h1 className="text-[clamp(2.6rem,5vw,4rem)] font-bold leading-[1.08] tracking-tight text-white">
+            <h1 className="text-[clamp(1.9rem,5vw,4rem)] font-bold leading-[1.08] tracking-tight text-white">
               Strategic Legal<br />
               Counsel for<br />
               Growing Businesses.
@@ -130,43 +124,37 @@ export default function HomePage() {
               aria-hidden="true"
               className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--color-navy-dark)] to-transparent"
             />
-
-            {/* Attorney name card — overlaid bottom-left of photo */}
-            <div className="absolute bottom-8 left-8 bg-black/55 px-5 py-3.5 backdrop-blur-sm">
-              <p className="text-sm font-semibold text-white">City Seokane</p>
-              <p className="mt-0.5 text-xs text-white/55">20+ Years&rsquo; Experience</p>
-            </div>
           </div>
         </div>
 
         {/* Recent Updates bar */}
         <div className="border-t border-white/10 bg-[var(--color-navy-dark)]">
-          <div className="container-site py-4">
-            <div className="flex flex-wrap items-center gap-6 lg:gap-0">
+          <div className="container-site py-10 sm:py-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 lg:gap-0">
               <p className="text-xs font-semibold uppercase tracking-widest text-white/50 flex-shrink-0 lg:w-36">
                 Latest Insights
               </p>
-              <div className="flex flex-1 flex-wrap justify-between gap-5">
+              <div className="flex flex-col sm:flex-row sm:flex-1 sm:flex-wrap sm:justify-between gap-3">
                 {recentArticles.map((article) => (
                   <Link
                     key={article.slug}
                     href={`/blog/${article.slug}`}
-                    className="group flex items-center gap-3 min-w-0 flex-1 basis-52"
+                    className="group flex items-center gap-3 min-w-0 transition-all hover:opacity-90"
                   >
-                    <div className="h-12 w-16 flex-shrink-0 overflow-hidden relative">
+                    <div className="h-12 w-16 flex-shrink-0 overflow-hidden relative border border-white/10 group-hover:border-white/20 transition-all">
                       <Image
                         src={article.image}
                         alt=""
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="64px"
                       />
                     </div>
                     <div className="min-w-0">
-                      <p className="text-[11px] uppercase tracking-widest text-[var(--color-amber)] mb-0.5">
+                      <p className="text-[11px] uppercase tracking-widest text-[var(--color-amber)] mb-0.5 group-hover:text-[var(--color-amber-light)] transition-colors">
                         {article.tag}
                       </p>
-                      <p className="text-xs font-semibold text-white group-hover:text-white/80 line-clamp-2 max-w-[220px]">
+                      <p className="text-xs font-semibold text-white group-hover:text-white/80 line-clamp-2 max-w-[220px] transition-colors">
                         {article.title}
                       </p>
                     </div>
@@ -213,8 +201,8 @@ export default function HomePage() {
             <div className="stat-card-dark">
               <p className="text-7xl font-sans font-bold text-white leading-none">95%</p>
               <div>
-                <p className="text-sm font-semibold text-white/80">Client Satisfaction Rate</p>
-                <p className="mt-1 text-xs text-white/50">Based on post-case client feedback</p>
+                <p className="text-[1.05rem] font-semibold text-white/80">Client Satisfaction Rate</p>
+                <p className="mt-1 text-[0.9rem] text-white/50">Based on post-case client feedback</p>
               </div>
             </div>
 
@@ -222,8 +210,8 @@ export default function HomePage() {
             <div className="stat-card-light">
               <p className="text-7xl font-sans font-bold text-[var(--color-navy-dark)] leading-none">20+</p>
               <div>
-                <p className="text-sm font-semibold text-[var(--color-ink)]">Years Combined Experience</p>
-                <p className="mt-1 text-xs text-[var(--color-ink-muted)]">Founded on roots dating back to 2001</p>
+                <p className="text-[1.05rem] font-semibold text-[var(--color-ink)]">Years Combined Experience</p>
+                <p className="mt-1 text-[0.9rem] text-[var(--color-ink-muted)]">Founded on roots dating back to 2001</p>
               </div>
             </div>
 
@@ -231,8 +219,8 @@ export default function HomePage() {
             <div className="stat-card-light">
               <p className="text-7xl font-sans font-bold text-[var(--color-navy-dark)] leading-none">5</p>
               <div>
-                <p className="text-sm font-semibold text-[var(--color-ink)]">Focused Practice Areas</p>
-                <p className="mt-1 text-xs text-[var(--color-ink-muted)]">
+                <p className="text-[1.05rem] font-semibold text-[var(--color-ink)]">Focused Practice Areas</p>
+                <p className="mt-1 text-[0.9rem] text-[var(--color-ink-muted)]">
                   Commercial · Corporate · Employment · Estates · Compliance
                 </p>
               </div>
@@ -245,7 +233,7 @@ export default function HomePage() {
       <section className="section-padding bg-[var(--color-surface)]">
         <div className="container-site">
           <p className="eyebrow mb-3">Why Choose Us</p>
-          <h2 className="text-4xl xl:text-5xl mb-10">Why Growing Businesses Choose Seokane</h2>
+          <h2 className="text-3xl sm:text-4xl xl:text-5xl mb-10">Why Growing Businesses Choose Seokane</h2>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {whyChooseItems.map(({ icon: Icon, title, body }, i) => {
@@ -255,12 +243,10 @@ export default function HomePage() {
                   key={title}
                   className={`feature-card ${isFirst ? "bg-[var(--color-navy)] shadow-none" : ""}`}
                 >
-                  <div className={`flex h-14 w-14 flex-shrink-0 items-center justify-center ${isFirst ? "bg-white/15" : "bg-[var(--color-navy-dark)]"}`}>
-                    <Icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  <div className="mt-6">
-                    <h3 className={`text-xl mb-2 ${isFirst ? "text-white" : ""}`}>{title}</h3>
-                    <p className={`text-sm leading-relaxed line-clamp-4 ${isFirst ? "text-white/65" : "text-[var(--color-ink-muted)]"}`}>{body}</p>
+                  <Icon className={`h-5 w-5 flex-shrink-0 ${isFirst ? "text-white" : "text-[var(--color-navy-dark)]"}`} aria-hidden="true" />
+                  <div>
+                    <h3 className={`text-base font-semibold mb-1.5 ${isFirst ? "text-white" : ""}`}>{title}</h3>
+                    <p className={`text-xs leading-relaxed line-clamp-5 ${isFirst ? "text-white/65" : "text-[var(--color-ink-muted)]"}`}>{body}</p>
                   </div>
                 </article>
               );
@@ -364,7 +350,7 @@ export default function HomePage() {
               <article key={member.name} className="group">
                 <div className="overflow-hidden mb-4 relative h-80 w-full">
                   <Image
-                    src={teamImages[member.name] ?? "/images/team-city-seokane.jpg"}
+                    src={member.image}
                     alt={`Photo of ${member.name}`}
                     fill
                     className="object-cover object-[center_15%] transition-transform duration-500 group-hover:scale-105"
@@ -549,10 +535,10 @@ export default function HomePage() {
         />
 
         <div className="container-site relative z-10 text-center">
-          <h2 className="text-4xl sm:text-5xl text-white mb-3">
+          <h2 className="text-3xl sm:text-4xl xl:text-5xl text-white mb-3">
             Ready to Resolve Your<br />Legal Challenge?
           </h2>
-          <p className="text-2xl sm:text-3xl font-sans text-white/80 mb-4">
+          <p className="text-xl sm:text-2xl md:text-3xl font-sans text-white/80 mb-4">
             Seokane Inc. is Here to Help.
           </p>
           <p className="text-white/55 mb-10 max-w-md mx-auto">

@@ -1,6 +1,7 @@
 export type PracticeArea = {
   slug: string;
   title: string;
+  image: string;
   shortDescription: string;
   fullDescription: string;
   services: string[];
@@ -10,6 +11,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "commercial-litigation",
     title: "Commercial Litigation",
+    image: "/images/hero-practice-commercial-litigation.jpg",
     shortDescription:
       "Strategic dispute resolution for high-stakes commercial conflicts.",
     fullDescription:
@@ -25,6 +27,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "corporate-commercial",
     title: "Corporate & Commercial Law",
+    image: "/images/hero-practice-corporate-commercial.jpg",
     shortDescription:
       "Practical legal structuring for transactions, growth, and governance.",
     fullDescription:
@@ -40,6 +43,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "employment-labour",
     title: "Employment & Labour Law",
+    image: "/images/hero-practice-employment-labour.jpg",
     shortDescription:
       "Employer-focused labour law guidance for compliance and dispute readiness.",
     fullDescription:
@@ -55,6 +59,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "estates-trusts",
     title: "Estates & Trusts",
+    image: "/images/hero-practice-estates-trusts.jpg",
     shortDescription:
       "Clear, compassionate legal support for estate and trust administration.",
     fullDescription:
@@ -70,6 +75,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "business-compliance",
     title: "Business Compliance",
+    image: "/images/hero-practice-business-compliance.png",
     shortDescription:
       "Ongoing compliance support to keep your business properly constituted.",
     fullDescription:
@@ -136,16 +142,19 @@ export const teamMembers = [
   {
     name: "City Seokane",
     title: "Director",
+    image: "/images/team-city-seokane.jpg",
     bio: "City was admitted as an attorney of the High Court in 1999, and has been in active practice since 2001. Before establishing private practice, he held senior executive roles at major South African organisations — including Alexander Forbes Risk Services, the SABC, and VVM Global Services, where he served as Chief Executive Officer. That corporate background is what makes his legal counsel different. He leads all strategic client matters at Seokane Inc. and is the primary point of contact for corporate and high-value commercial work.",
   },
   {
     name: "Modiegi Mafalo",
     title: "Senior Associate",
+    image: "/images/team-modiegi-mafalo.jpg",
     bio: "Modiegi was admitted as an attorney of the High Court in June 2018. She holds an LLB from the University of Limpopo and a Postgraduate Certificate in Corporate Law from UNISA. She leads the firm's corporate litigation practice, with particular expertise in mercantile law, banking law, and commercial dispute resolution.",
   },
   {
     name: "Tshadi Lefakane",
     title: "Candidate Attorney",
+    image: "/images/team-tshadi-lefakane.jpg",
     bio: "Tshadi holds an LLB from UNISA and is registered as a candidate attorney with the Legal Practice Council. She provides grounded, diligent support across commercial contracts, employment law, civil litigation, and wills and estates — working directly with clients at every stage.",
   },
 ];

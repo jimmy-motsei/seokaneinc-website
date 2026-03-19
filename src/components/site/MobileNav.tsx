@@ -124,7 +124,7 @@ export function MobileNav({ navItems, office }: MobileNavProps) {
         {/* Drawer footer */}
         <div className="px-6 py-5 border-t border-white/10 space-y-1">
           <a
-            href={`tel:${office.phone}`}
+            href={`tel:${office.phone.replace(/\s+/g, "")}`}
             className="block text-sm text-white/50 hover:text-white/80 transition-colors"
           >
             {office.phone}
