@@ -9,6 +9,70 @@ export type PracticeArea = {
 
 export const practiceAreas: PracticeArea[] = [
   {
+    slug: "corporate-law",
+    title: "Corporate Law",
+    image: "/images/hero-practice-corporate-commercial.jpg",
+    shortDescription:
+      "Sound legal counsel for corporate governance, transactions, and business structuring.",
+    fullDescription:
+      "Sound corporate law advice is the foundation of a well-governed business. Whether you are structuring a transaction, managing shareholder relationships, or ensuring your directors understand their legal duties — the quality of your legal counsel at this level shapes your business for years. We advise management teams, directors, and shareholders on the full range of corporate legal matters, combining technical legal rigour with the commercial insight that comes from real executive experience.",
+    services: [
+      "Shareholder and partnership agreements",
+      "Mergers, acquisitions, and due diligence support",
+      "Corporate restructuring and reorganisation",
+      "Director duties and board governance advisory",
+      "Corporate compliance and statutory obligations",
+    ],
+  },
+  {
+    slug: "commercial-law",
+    title: "Commercial Law",
+    image: "/images/attorneys-consultation.jpg",
+    shortDescription:
+      "Practical legal support for commercial contracts, negotiations, and business dealings.",
+    fullDescription:
+      "Every commercial relationship you enter — with clients, suppliers, partners, or investors — is governed by contracts and agreements. When those documents are well-drafted and clearly understood, they protect your business. When they are not, they become a source of costly disputes and uncertainty. We help businesses structure and document their commercial dealings in a way that is legally robust, commercially practical, and enforceable when it matters.",
+    services: [
+      "Commercial contract drafting and review",
+      "Terms of service and supplier agreements",
+      "Negotiation support and commercial risk advisory",
+      "Joint venture and partnership structuring",
+      "Contract dispute prevention and pre-litigation advisory",
+    ],
+  },
+  {
+    slug: "company-secretarial",
+    title: "Company Secretarial",
+    image: "/images/hero-practice-business-compliance.png",
+    shortDescription:
+      "Ongoing compliance support to keep your business properly constituted and audit-ready.",
+    fullDescription:
+      "Staying compliant with South Africa's Companies Act, CIPC requirements, and ongoing statutory obligations is not optional — and it's easy to fall behind when you're focused on running your business. We act as a reliable company secretarial partner, handling the filings, records, and documentation that keep your business properly constituted and audit-ready. From company registrations to director changes and annual returns, we manage the administrative and compliance backbone of your corporate structure.",
+    services: [
+      "CIPC company registrations and amendments",
+      "Director and shareholder changes",
+      "Statutory register maintenance",
+      "Annual return filing and governance support",
+      "Company secretarial advisory",
+    ],
+  },
+  {
+    slug: "intellectual-property",
+    title: "Intellectual Property",
+    image: "/images/hero-attorney.jpg",
+    shortDescription:
+      "Protecting your business's intellectual assets, brands, and proprietary rights.",
+    fullDescription:
+      "Your intellectual property — your brand, your original works, your confidential information and trade secrets — is often among your most valuable business assets. Protecting it requires both proactive legal structuring and swift action when infringement occurs. We advise businesses on identifying, protecting, and enforcing their intellectual property rights under South African law, and help put in place the agreements and registrations that safeguard what you have built.",
+    services: [
+      "Trade mark registration and protection",
+      "Copyright advisory",
+      "Confidentiality and non-disclosure agreements",
+      "IP licensing and assignment agreements",
+      "IP infringement advisory",
+    ],
+  },
+  {
     slug: "commercial-litigation",
     title: "Commercial Litigation",
     image: "/images/hero-practice-commercial-litigation.jpg",
@@ -25,67 +89,35 @@ export const practiceAreas: PracticeArea[] = [
     ],
   },
   {
-    slug: "corporate-commercial",
-    title: "Corporate & Commercial Law",
-    image: "/images/hero-practice-corporate-commercial.jpg",
-    shortDescription:
-      "Practical legal structuring for transactions, growth, and governance.",
-    fullDescription:
-      "Whether you're closing a transaction, restructuring your business, or negotiating a contract that needs to hold under pressure — sound corporate legal advice is what protects your interests and keeps your business moving forward. We work with management teams, directors, and shareholders to provide advice that is technically rigorous and commercially practical. We understand that legal decisions happen in the context of business deadlines and competing priorities.",
-    services: [
-      "Commercial contract drafting and review",
-      "Due diligence support",
-      "Shareholder and partnership agreements",
-      "Corporate restructuring support",
-      "Board and governance advisory",
-    ],
-  },
-  {
-    slug: "employment-labour",
-    title: "Employment & Labour Law",
-    image: "/images/hero-practice-employment-labour.jpg",
-    shortDescription:
-      "Employer-focused labour law guidance for compliance and dispute readiness.",
-    fullDescription:
-      "South African employment law is detailed, constantly evolving, and unforgiving of procedural errors. Whether you're managing a disciplinary matter, navigating a retrenchment, or defending a CCMA dispute, the outcome often depends on whether the right processes were followed from the start. We help employers build solid employment frameworks and respond effectively when disputes arise.",
-    services: [
-      "Employment contract drafting",
-      "Disciplinary and grievance process support",
-      "CCMA dispute representation support",
-      "Workplace policy frameworks",
-      "Retrenchment and restructuring guidance",
-    ],
-  },
-  {
-    slug: "estates-trusts",
-    title: "Estates & Trusts",
+    slug: "administration-of-estates",
+    title: "Administration of Estates",
     image: "/images/hero-practice-estates-trusts.jpg",
     shortDescription:
-      "Clear, compassionate legal support for estate and trust administration.",
+      "Expert guidance through the deceased estate administration process.",
     fullDescription:
-      "Dealing with a deceased estate or setting up a trust often happens during emotionally difficult times — and the legal and administrative requirements can feel overwhelming. We provide clear, step-by-step guidance to make the process as straightforward as possible. Our goal is to give you confidence that everything is being handled correctly, so you can focus on what matters.",
+      "Administering a deceased estate involves a formal, regulated process that can feel overwhelming — particularly during an emotionally difficult time. The requirements under the Administration of Estates Act are detailed, and errors or delays at any stage can create complications for beneficiaries and heirs. We provide step-by-step guidance to executors and families, ensuring that the estate is reported, administered, and distributed correctly and efficiently.",
     services: [
-      "Will drafting and review",
-      "Trust formation and advisory",
-      "Deceased estate administration",
-      "Executor support",
+      "Reporting deceased estates to the Master of the High Court",
+      "Executor appointment and letters of executorship support",
+      "Liquidation and distribution account preparation",
+      "Estate creditor management",
       "Estate compliance documentation",
     ],
   },
   {
-    slug: "business-compliance",
-    title: "Business Compliance",
-    image: "/images/hero-practice-business-compliance.png",
+    slug: "wills-and-trusts",
+    title: "Wills and Trusts",
+    image: "/images/hero-practice-estates-trusts.jpg",
     shortDescription:
-      "Ongoing compliance support to keep your business properly constituted.",
+      "Careful planning and drafting to protect your legacy and provide for your loved ones.",
     fullDescription:
-      "Staying compliant with South Africa's Companies Act, CIPC requirements, and ongoing statutory obligations is not optional — and it's easy to fall behind when you're focused on running your business. We act as a reliable compliance partner, handling the filings, records, and documentation that keep your business properly constituted and audit-ready.",
+      "A valid, well-drafted will is one of the most important legal documents you will ever sign. Without one, your estate is distributed according to the Intestate Succession Act — which may not reflect your wishes or provide for your family as you intend. Trusts, used correctly, provide powerful tools for asset protection, estate planning, and providing for dependants. We advise on both instruments with care and clarity, tailored to your personal and financial circumstances.",
     services: [
-      "CIPC company registrations",
-      "Director and shareholder changes",
-      "Annual return and governance support",
-      "Statutory document preparation",
-      "Company secretarial advisory",
+      "Will drafting and review",
+      "Inter vivos and testamentary trust formation",
+      "Trust deed drafting and advisory",
+      "Estate planning advisory",
+      "Trust administration support",
     ],
   },
 ];
@@ -94,7 +126,7 @@ export const proofPoints = [
   {
     title: "Deep Corporate Experience",
     description:
-      "Our Director has held senior executive roles at Alexander Forbes Risk Services, the SABC, and VVM Global Services — including Chief Executive Officer. That background means we understand your business context, not just the legal technicalities.",
+      "Our Director City Seokane, held senior positions in both the legal profession and the corporate environment, demonstrating leadership and strategic management across multiple industries. That background means we understand your business context, not just the legal technicalities.",
   },
   {
     title: "Focused High-Impact Expertise",
@@ -125,15 +157,6 @@ export const smeServices = [
       "Terms of service and supplier agreements",
       "Dispute prevention and resolution support",
       "Transaction and partnership legal support",
-    ],
-  },
-  {
-    title: "Employment & Labour Support",
-    items: [
-      "Employment contracts and HR policy drafting",
-      "Disciplinary and incapacity process guidance",
-      "Labour dispute and CCMA support",
-      "Workplace compliance advisory",
     ],
   },
 ];
@@ -241,7 +264,7 @@ export const articles: Article[] = [
     date: "28 January 2026",
     dateISO: "2026-01-28",
     tag: "Corporate & Commercial",
-    practiceSlug: "corporate-commercial",
+    practiceSlug: "corporate-law",
     title: "Shareholder Agreements: Why Every Business Needs One",
     excerpt:
       "A shareholder agreement is the legal foundation of your business relationship. Without one, disputes can become expensive and uncontrollable.",
@@ -264,7 +287,7 @@ export const articles: Article[] = [
     date: "15 November 2025",
     dateISO: "2025-11-15",
     tag: "Corporate & Commercial",
-    practiceSlug: "corporate-commercial",
+    practiceSlug: "commercial-law",
     title: "Five Common Mistakes in Commercial Contracts",
     excerpt:
       "Poorly drafted contracts create uncertainty, enable disputes, and expose your business to risk. Here are the mistakes we see most often — and how to avoid them.",
@@ -286,66 +309,13 @@ export const articles: Article[] = [
     `,
   },
 
-  /* ── Employment & Labour ── */
-  {
-    slug: "ccma-disputes-what-employers-need-to-know",
-    date: "5 February 2026",
-    dateISO: "2026-02-05",
-    tag: "Employment & Labour",
-    practiceSlug: "employment-labour",
-    title: "CCMA Disputes: What Employers Need to Know",
-    excerpt:
-      "A CCMA referral is not the end of the world — but only if you handle it correctly from the start. Here is what employers need to understand.",
-    image: "/images/hero-practice-employment-labour.jpg",
-    readTime: "5 min read",
-    author: "City Seokane",
-    body: `
-      <p>When an employee refers a dispute to the Commission for Conciliation, Mediation and Arbitration, many employers treat it as a minor irritation. It is not. A poorly handled CCMA matter can result in an award of compensation, reinstatement, and costs that damage your business and your reputation as an employer.</p>
-      <h2>The Referral Process</h2>
-      <p>An employee has 30 days from the date of dismissal (or the date on which the employee became aware of the dismissal) to refer an unfair dismissal dispute to the CCMA. For unfair labour practice disputes, the period is 90 days. Missing a referral deadline can bar an employee from pursuing the dispute, but employers should not rely on this — focus on getting the substantive process right.</p>
-      <h2>Conciliation: The First Stage</h2>
-      <p>All disputes must go through conciliation before proceeding to arbitration. At conciliation, a CCMA commissioner attempts to facilitate a settlement between the parties. Conciliation is confidential, and anything said during the process is without prejudice. Many matters settle at this stage. Employers should arrive at conciliation with a clear understanding of their legal position and a realistic settlement mandate.</p>
-      <h2>Arbitration: If Conciliation Fails</h2>
-      <p>If conciliation fails, the dispute proceeds to arbitration, where a commissioner hears evidence and arguments from both parties and makes a binding award. This is a formal process that requires preparation — witness statements, documentary evidence, and a clear legal argument. The employer bears the onus to prove that the dismissal was both substantively and procedurally fair.</p>
-      <h2>The Importance of Procedure</h2>
-      <p>Even where a dismissal is substantively justified — where an employee genuinely committed misconduct or was genuinely incapable — a dismissal can be found procedurally unfair if the correct process was not followed. A fair disciplinary hearing, adequate notice, and a genuine opportunity to respond are not optional formalities. Get the process right from the beginning, before a referral is lodged.</p>
-      <p>Our employment team assists employers with CCMA representation and pre-dispute process design. Contact us to discuss your matter.</p>
-    `,
-  },
-  {
-    slug: "retrenchment-process-south-africa",
-    date: "22 October 2025",
-    dateISO: "2025-10-22",
-    tag: "Employment & Labour",
-    practiceSlug: "employment-labour",
-    title: "The Retrenchment Process in South Africa: A Step-by-Step Guide",
-    excerpt:
-      "Retrenchment is one of the most legally fraught processes in South African employment law. Getting the steps right protects your business from costly disputes.",
-    image: "/images/hero-attorney.jpg",
-    readTime: "6 min read",
-    author: "Modiegi Mafalo",
-    body: `
-      <p>Retrenchment — the dismissal of employees for operational requirements — is permitted by the Labour Relations Act, but only if the employer follows a specific, detailed process. Failing to follow that process correctly, even if the business justification is sound, can result in findings of procedurally unfair dismissal and significant compensation awards.</p>
-      <h2>Step 1: Confirm the Operational Justification</h2>
-      <p>Retrenchment must be based on genuine operational requirements — economic, technological, structural, or similar needs of the business. It cannot be used as a disguised disciplinary measure or as a way to target specific employees. Before initiating a retrenchment process, ensure the justification is real, documented, and defensible.</p>
-      <h2>Step 2: Issue a Section 189 or 189A Notice</h2>
-      <p>The process begins with a written notice to affected employees (and any representative trade union) in terms of section 189 of the LRA. This notice must disclose specific information — including the reasons for the proposed retrenchments, the alternatives considered, the number and categories of employees affected, and the proposed severance pay. The content of this notice is prescribed by law; an inadequate notice can invalidate the entire process.</p>
-      <h2>Step 3: Meaningful Consultation</h2>
-      <p>The employer must consult with affected employees or their representatives with a view to reaching agreement on measures to avoid or minimise retrenchments, and on severance pay and selection criteria. The consultation must be genuine and meaningful — it cannot be a rubber-stamping exercise. Courts scrutinise the quality of consultation closely.</p>
-      <h2>Step 4: Selection Criteria</h2>
-      <p>Where not all employees in a particular category are being retrenched, the selection criteria must be fair and objective — typically LIFO (last in, first out), skills, or agreed criteria. Applying selection criteria that appear neutral but disproportionately affect a protected class of employees can attract claims of unfair discrimination.</p>
-      <h2>Step 5: Severance Pay and Post-Retrenchment Obligations</h2>
-      <p>Employees retrenched for operational requirements are entitled to severance pay of at least one week's remuneration per completed year of service (unless a more favourable entitlement applies). Employers must also issue correct UIF documentation and pay out all outstanding leave and notice pay. Contact us before initiating any retrenchment process to ensure you get every step right.</p>
-    `,
-  },
-
   /* ── Estates & Trusts ── */
   {
     slug: "deceased-estate-administration-what-to-expect",
     date: "3 December 2025",
     dateISO: "2025-12-03",
     tag: "Estates & Trusts",
-    practiceSlug: "estates-trusts",
+    practiceSlug: "administration-of-estates",
     title: "Deceased Estate Administration: What to Expect",
     excerpt:
       "Administering a deceased estate involves more steps than most people realise. Understanding the process helps families navigate a difficult time with clarity.",
@@ -371,7 +341,7 @@ export const articles: Article[] = [
     date: "18 February 2026",
     dateISO: "2026-02-18",
     tag: "Business Compliance",
-    practiceSlug: "business-compliance",
+    practiceSlug: "company-secretarial",
     title: "CIPC Annual Returns: What Companies Need to Know",
     excerpt:
       "CIPC annual returns are a basic but non-negotiable compliance requirement. Missing the deadline has real consequences for your company's standing.",
@@ -395,7 +365,7 @@ export const articles: Article[] = [
     date: "12 September 2025",
     dateISO: "2025-09-12",
     tag: "Business Compliance",
-    practiceSlug: "business-compliance",
+    practiceSlug: "company-secretarial",
     title: "Company Secretarial Services: Why They Matter for Your Business",
     excerpt:
       "Company secretarial work is often treated as administrative overhead. In reality, it is the foundation of your company's legal integrity — and neglecting it has consequences.",

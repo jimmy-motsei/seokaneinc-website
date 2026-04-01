@@ -186,11 +186,11 @@ export default function HomePage() {
                 compliance challenges that keep business owners up at night.
               </p>
               <p className="mt-4">
-                What sets us apart is not just our legal expertise. Our Director, City
-                Seokane, held senior executive roles at Alexander Forbes, the SABC, and
-                VVM Global Services before establishing private practice. That corporate
-                background means our advice is shaped by real business context — not just
-                legal technicalities.
+                What sets us apart is not just our legal expertise. Our Director City
+                Seokane, held senior positions in both the legal profession and the corporate
+                environment, demonstrating leadership and strategic management across multiple
+                industries. That corporate background means our advice is shaped by real
+                business context — not just legal technicalities.
               </p>
             </div>
           </div>

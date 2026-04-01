@@ -23,11 +23,13 @@ export type ContactResult =
   | { status: "error"; message: string };
 
 const PRACTICE_LABELS: Record<string, string> = {
+  "corporate-law": "Corporate Law",
+  "commercial-law": "Commercial Law",
+  "company-secretarial": "Company Secretarial",
+  "intellectual-property": "Intellectual Property",
   "commercial-litigation": "Commercial Litigation",
-  "corporate-commercial": "Corporate & Commercial",
-  "employment-labour": "Employment & Labour",
-  "estates-trusts": "Estates & Trusts",
-  "business-compliance": "Business Compliance",
+  "administration-of-estates": "Administration of Estates",
+  "wills-and-trusts": "Wills and Trusts",
   "sme-services": "SME Services",
   other: "Other / General",
 };

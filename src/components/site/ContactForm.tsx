@@ -93,11 +93,13 @@ export function ContactForm() {
         <select id="subject" name="subject" required defaultValue=""
           className={`${fieldErrors.subject ? FIELD_ERROR_CLASS : FIELD_CLASS} cursor-pointer`}>
           <option value="" disabled>Select a practice area</option>
+          <option value="corporate-law">Corporate Law</option>
+          <option value="commercial-law">Commercial Law</option>
+          <option value="company-secretarial">Company Secretarial</option>
+          <option value="intellectual-property">Intellectual Property</option>
           <option value="commercial-litigation">Commercial Litigation</option>
-          <option value="corporate-commercial">Corporate &amp; Commercial</option>
-          <option value="employment-labour">Employment &amp; Labour</option>
-          <option value="estates-trusts">Estates &amp; Trusts</option>
-          <option value="business-compliance">Business Compliance</option>
+          <option value="administration-of-estates">Administration of Estates</option>
+          <option value="wills-and-trusts">Wills and Trusts</option>
           <option value="sme-services">SME Services</option>
           <option value="other">Other / General Inquiry</option>
         </select>

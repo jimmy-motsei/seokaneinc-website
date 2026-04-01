@@ -7,7 +7,7 @@ import { practiceAreas } from "@/content/site-content";
 export const metadata: Metadata = {
   title: "Practice Areas | Seokane Incorporated",
   description:
-    "Commercial litigation, corporate and commercial law, employment and labour, estates and trusts, and business compliance. Boutique legal expertise for SA businesses.",
+    "Corporate law, commercial law, company secretarial, intellectual property, commercial litigation, administration of estates, and wills and trusts. Boutique legal expertise for SA businesses.",
 };
 
 export default function PracticeAreasPage() {

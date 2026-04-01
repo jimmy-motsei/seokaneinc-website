@@ -63,10 +63,10 @@ export default function AboutPage() {
           <h2 className="text-3xl mb-6">City Seokane — Director</h2>
           <div className="space-y-4 text-ink-muted leading-relaxed">
             <p>
-              City was admitted as an attorney of the High Court in 1999. Before establishing
-              private practice, he held senior executive roles in major South African
-              organisations — including positions at Alexander Forbes Risk Services, the SABC,
-              and VVM Global Services, where he served as Chief Executive Officer.
+              City was admitted as an attorney of the High Court in 1999. He held senior
+              positions in both the legal profession and the corporate environment,
+              demonstrating leadership and strategic management across multiple industries,
+              before establishing private practice.
             </p>
             <p>
               That career path shapes how we work. When you sit across from City in a
