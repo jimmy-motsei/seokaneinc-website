@@ -169,10 +169,10 @@ export const teamMembers = [
     bio: "City was admitted as an attorney of the High Court in 1999, and has been in active practice since 2001. Before establishing private practice, he held senior executive roles at major South African organisations — including Alexander Forbes Risk Services, the SABC, and VVM Global Services, where he served as Chief Executive Officer. That corporate background is what makes his legal counsel different. He leads all strategic client matters at Seokane Inc. and is the primary point of contact for corporate and high-value commercial work.",
   },
   {
-    name: "Modiegi Mafalo",
+    name: "Lerato Anita Ferland",
     title: "Senior Associate",
-    image: "/images/team-modiegi-mafalo.jpg",
-    bio: "Modiegi was admitted as an attorney of the High Court in June 2018. She holds an LLB from the University of Limpopo and a Postgraduate Certificate in Corporate Law from UNISA. She leads the firm's corporate litigation practice, with particular expertise in mercantile law, banking law, and commercial dispute resolution.",
+    image: "/images/lerato-ferland-headshot.png",
+    bio: "Lerato Anita Ferland is an Admitted Attorney of the High Court of South Africa (Gauteng Local Division) and a Senior Associate at Seokane Incorporated Attorneys. She is known for her strong legal expertise, professionalism, and client-focused approach. Beginning her legal career in 2017 as a legal assistant, Lerato completed her articles at a reputable Johannesburg firm, gaining experience in estate administration, family law, debt collection, motion proceedings, and litigation support. Since joining Seokane Incorporated in 2023, she has focused on high court litigation, corporate and commercial law, and estate planning. She is also pursuing further qualifications in Conveyancing and Notarial Practice to expand her professional capabilities.",
   },
   {
     name: "Tshadi Lefakane",
