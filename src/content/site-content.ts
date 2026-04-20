@@ -177,7 +177,7 @@ export const teamMembers = [
   {
     name: "Sesethu Zingelwa",
     title: "Associate",
-    image: "/images/team-tshadi-lefakane.jpg", // TODO: replace with sesethu-zingelwa-headshot.jpg when available
+    image: "/images/sesethu-zingelwa-headshot.png",
     bio: "Sesethu Zingelwa is an Admitted Attorney of the High Court of South Africa and an Associate at Seokane Incorporated Attorneys. With a background in both law and psychology, she brings valuable experience in infrastructure projects, corporate and commercial law, and dispute resolution. She began her career at ENS in the Project Development and Finance team, advising government and state-owned entities on major infrastructure transactions, including pipelines, ports, and public-private partnerships. After her admission, she expanded her practice to litigation, dispute resolution, and corporate law, providing practical and professional legal support to both corporate and individual clients.",
   },
 ];
