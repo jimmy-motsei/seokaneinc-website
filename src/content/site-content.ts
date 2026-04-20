@@ -59,7 +59,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "intellectual-property",
     title: "Intellectual Property",
-    image: "/images/hero-attorney.jpg",
+    image: "/images/intellectual-property.png",
     shortDescription:
       "Protecting your business's intellectual assets, brands, and proprietary rights.",
     fullDescription:
@@ -211,8 +211,8 @@ export const articles: Article[] = [
   /* ── Commercial Litigation ── */
   {
     slug: "navigating-commercial-disputes-south-africa",
-    date: "14 January 2026",
-    dateISO: "2026-01-14",
+    date: "2 April 2026",
+    dateISO: "2026-04-02",
     tag: "Commercial Litigation",
     practiceSlug: "commercial-litigation",
     title: "Navigating Commercial Disputes in South Africa: A Strategic Guide",
@@ -236,8 +236,8 @@ export const articles: Article[] = [
   },
   {
     slug: "urgent-interdict-applications-explained",
-    date: "8 December 2025",
-    dateISO: "2025-12-08",
+    date: "6 April 2026",
+    dateISO: "2026-04-06",
     tag: "Commercial Litigation",
     practiceSlug: "commercial-litigation",
     title: "Urgent Interdict Applications: When Speed Matters",
@@ -245,7 +245,7 @@ export const articles: Article[] = [
       "An urgent interdict can stop wrongful conduct in its tracks — but only if you act correctly and quickly. Understanding the requirements is essential.",
     image: "/images/attorneys-consultation.jpg",
     readTime: "4 min read",
-    author: "Modiegi Mafalo",
+    author: "Sesethu Zingelwa",
     body: `
       <p>When someone is acting in a way that is causing you immediate and ongoing harm, the law provides a powerful remedy: the urgent interdict. But obtaining one requires satisfying the court on multiple requirements, and getting it wrong can result in a costly failure at a critical moment.</p>
       <h2>The Requirements for an Urgent Interdict</h2>
@@ -261,8 +261,8 @@ export const articles: Article[] = [
   /* ── Corporate & Commercial ── */
   {
     slug: "shareholder-agreements-why-every-business-needs-one",
-    date: "28 January 2026",
-    dateISO: "2026-01-28",
+    date: "9 April 2026",
+    dateISO: "2026-04-09",
     tag: "Corporate & Commercial",
     practiceSlug: "corporate-law",
     title: "Shareholder Agreements: Why Every Business Needs One",
@@ -284,8 +284,8 @@ export const articles: Article[] = [
   },
   {
     slug: "commercial-contracts-common-drafting-mistakes",
-    date: "15 November 2025",
-    dateISO: "2025-11-15",
+    date: "13 April 2026",
+    dateISO: "2026-04-13",
     tag: "Corporate & Commercial",
     practiceSlug: "commercial-law",
     title: "Five Common Mistakes in Commercial Contracts",
@@ -293,7 +293,7 @@ export const articles: Article[] = [
       "Poorly drafted contracts create uncertainty, enable disputes, and expose your business to risk. Here are the mistakes we see most often — and how to avoid them.",
     image: "/images/hero-about.jpg",
     readTime: "4 min read",
-    author: "Modiegi Mafalo",
+    author: "Sesethu Zingelwa",
     body: `
       <p>A commercial contract should clearly allocate rights, obligations, and risk between the parties. When it fails to do that — because it is poorly drafted, copied from a template without adaptation, or rushed through without legal review — it becomes a liability rather than a protection.</p>
       <h2>1. Vague Scope of Work or Deliverables</h2>
@@ -312,8 +312,8 @@ export const articles: Article[] = [
   /* ── Estates & Trusts ── */
   {
     slug: "deceased-estate-administration-what-to-expect",
-    date: "3 December 2025",
-    dateISO: "2025-12-03",
+    date: "16 April 2026",
+    dateISO: "2026-04-16",
     tag: "Estates & Trusts",
     practiceSlug: "administration-of-estates",
     title: "Deceased Estate Administration: What to Expect",
@@ -321,7 +321,7 @@ export const articles: Article[] = [
       "Administering a deceased estate involves more steps than most people realise. Understanding the process helps families navigate a difficult time with clarity.",
     image: "/images/hero-practice-estates-trusts.jpg",
     readTime: "5 min read",
-    author: "Tshadi Lefakane",
+    author: "Lerato Anita Ferland",
     body: `
       <p>When a person dies, their estate must be administered and distributed in accordance with their will (if there is one) or the Intestate Succession Act (if there is not). The process is regulated by the Administration of Estates Act and involves several formal steps — many of which take time and require careful attention to avoid delays or legal complications.</p>
       <h2>Reporting the Estate</h2>
@@ -338,8 +338,8 @@ export const articles: Article[] = [
   /* ── Business Compliance ── */
   {
     slug: "cipc-annual-returns-what-companies-need-to-know",
-    date: "18 February 2026",
-    dateISO: "2026-02-18",
+    date: "20 April 2026",
+    dateISO: "2026-04-20",
     tag: "Business Compliance",
     practiceSlug: "company-secretarial",
     title: "CIPC Annual Returns: What Companies Need to Know",
@@ -347,7 +347,7 @@ export const articles: Article[] = [
       "CIPC annual returns are a basic but non-negotiable compliance requirement. Missing the deadline has real consequences for your company's standing.",
     image: "/images/hero-practice-business-compliance.png",
     readTime: "4 min read",
-    author: "Tshadi Lefakane",
+    author: "Lerato Anita Ferland",
     body: `
       <p>Every company and close corporation registered with the Companies and Intellectual Property Commission is required to file an annual return. This is not a tax filing — it is a statutory compliance requirement under the Companies Act, 2008. The obligation applies whether or not the company is trading, and failure to comply can result in your company being deregistered.</p>
       <h2>When Must Annual Returns Be Filed?</h2>
@@ -362,8 +362,8 @@ export const articles: Article[] = [
   },
   {
     slug: "company-secretarial-services-why-they-matter",
-    date: "12 September 2025",
-    dateISO: "2025-09-12",
+    date: "23 April 2026",
+    dateISO: "2026-04-23",
     tag: "Business Compliance",
     practiceSlug: "company-secretarial",
     title: "Company Secretarial Services: Why They Matter for Your Business",
