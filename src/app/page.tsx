@@ -111,11 +111,11 @@ export default function HomePage() {
           {/* Right: photo fills remaining width, bleeds to viewport edge */}
           <div className="relative hidden flex-1 lg:block">
             <Image
-              src="/images/hero-attorney.jpg"
+              src="/images/city-seokane-office.png"
               alt="City Seokane, Director — Seokane Incorporated"
               fill
               priority
-              className="object-cover object-center"
+              className="object-cover object-top"
               sizes="46vw"
             />
 

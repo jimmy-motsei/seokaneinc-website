@@ -165,7 +165,7 @@ export const teamMembers = [
   {
     name: "City Seokane",
     title: "Director",
-    image: "/images/team-city-seokane.jpg",
+    image: "/images/director-headshot.jpg",
     bio: "City was admitted as an attorney of the High Court in 1999, and has been in active practice since 2001. Before establishing private practice, he held senior executive roles at major South African organisations — including Alexander Forbes Risk Services, the SABC, and VVM Global Services, where he served as Chief Executive Officer. That corporate background is what makes his legal counsel different. He leads all strategic client matters at Seokane Inc. and is the primary point of contact for corporate and high-value commercial work.",
   },
   {
