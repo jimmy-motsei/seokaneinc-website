@@ -115,7 +115,7 @@ export default function HomePage() {
               alt="City Seokane, Director — Seokane Incorporated"
               fill
               priority
-              className="object-cover object-top"
+              className="object-cover object-[center_65%]"
               sizes="46vw"
             />
 
