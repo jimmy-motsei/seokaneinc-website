@@ -273,7 +273,7 @@ export default function HomePage() {
             </div>
             <div className="relative z-0 h-[440px] w-full overflow-hidden">
               <Image
-                src="/images/attorneys-consultation.jpg"
+                src="/images/attorneys-consultation.png"
                 alt="Seokane Inc. attorneys in consultation"
                 fill
                 className="object-cover object-center"
