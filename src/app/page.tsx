@@ -358,11 +358,18 @@ export default function HomePage() {
                   />
                   <div className="img-overlay-tint" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl">{member.name}</h3>
+                <h3 className="text-2xl font-serif">{member.name}</h3>
                 <p className="text-sm font-medium text-[var(--color-amber)] mt-0.5">{member.title}</p>
                 <p className="mt-2 text-sm text-[var(--color-ink-muted)] leading-relaxed line-clamp-3">
                   {member.bio}
                 </p>
+                <Link
+                  href="/team"
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-cta)] group-hover:gap-2.5 transition-all"
+                >
+                  Read full bio
+                  <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                </Link>
               </article>
             ))}
           </div>
@@ -385,12 +392,11 @@ export default function HomePage() {
             </p>
             <footer className="mt-8 flex items-center justify-center gap-3">
               <div className="h-10 w-10 rounded-full bg-[var(--color-navy-dark)] flex-shrink-0 flex items-center justify-center">
-                <span className="text-sm font-semibold text-white/70">C</span>
+                <span className="text-sm font-semibold text-white/70">J</span>
               </div>
               <div className="text-left">
-                {/* TODO: Replace with named client testimonial */}
-                <p className="text-sm font-semibold text-[var(--color-ink)]">[Client Name]</p>
-                <p className="text-xs text-[var(--color-ink-muted)]">Chief Executive Officer</p>
+                <p className="text-sm font-semibold text-[var(--color-ink)]">Mr. Justice Letsoela</p>
+                <p className="text-xs text-[var(--color-ink-muted)]">Managing Director : Cleanspikes Environment and Engineering</p>
               </div>
             </footer>
           </blockquote>
