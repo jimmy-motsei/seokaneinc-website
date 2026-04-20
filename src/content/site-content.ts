@@ -175,10 +175,10 @@ export const teamMembers = [
     bio: "Lerato Anita Ferland is an Admitted Attorney of the High Court of South Africa (Gauteng Local Division) and a Senior Associate at Seokane Incorporated Attorneys. She is known for her strong legal expertise, professionalism, and client-focused approach. Beginning her legal career in 2017 as a legal assistant, Lerato completed her articles at a reputable Johannesburg firm, gaining experience in estate administration, family law, debt collection, motion proceedings, and litigation support. Since joining Seokane Incorporated in 2023, she has focused on high court litigation, corporate and commercial law, and estate planning. She is also pursuing further qualifications in Conveyancing and Notarial Practice to expand her professional capabilities.",
   },
   {
-    name: "Tshadi Lefakane",
-    title: "Candidate Attorney",
-    image: "/images/team-tshadi-lefakane.jpg",
-    bio: "Tshadi holds an LLB from UNISA and is registered as a candidate attorney with the Legal Practice Council. She provides grounded, diligent support across commercial contracts, employment law, civil litigation, and wills and estates — working directly with clients at every stage.",
+    name: "Sesethu Zingelwa",
+    title: "Associate",
+    image: "/images/team-tshadi-lefakane.jpg", // TODO: replace with sesethu-zingelwa-headshot.jpg when available
+    bio: "Sesethu Zingelwa is an Admitted Attorney of the High Court of South Africa and an Associate at Seokane Incorporated Attorneys. With a background in both law and psychology, she brings valuable experience in infrastructure projects, corporate and commercial law, and dispute resolution. She began her career at ENS in the Project Development and Finance team, advising government and state-owned entities on major infrastructure transactions, including pipelines, ports, and public-private partnerships. After her admission, she expanded her practice to litigation, dispute resolution, and corporate law, providing practical and professional legal support to both corporate and individual clients.",
   },
 ];
 
