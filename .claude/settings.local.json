@@ -20,7 +20,10 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
       "mcp__Desktop_Commander__start_process",
       "mcp__Desktop_Commander__interact_with_process",
-      "mcp__Desktop_Commander__list_directory"
+      "mcp__Desktop_Commander__list_directory",
+      "Bash(mkdir -p /Users/ramoloimotsei/seokaneinc-website/src/app/api/contact)",
+      "Bash(mkdir -p /Users/ramoloimotsei/seokaneinc-website/src/app/api/newsletter)",
+      "Bash(npm uninstall *)"
     ]
   }
 }
