@@ -41,7 +41,7 @@ export default function TeamPage() {
       <section className="section-padding-sm bg-white">
         <div className="container-site grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {teamMembers.map((member) => (
-            <article key={member.name} className="card-base">
+            <article key={member.name} id={member.name.toLowerCase().replace(/\s+/g, "-")} className="card-base">
               <div className="relative h-80 w-full overflow-hidden -mx-10 -mt-10 mb-6" style={{ width: "calc(100% + 5rem)" }}>
                 <Image
                   src={member.image}

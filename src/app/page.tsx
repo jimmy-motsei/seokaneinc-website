@@ -364,7 +364,7 @@ export default function HomePage() {
                   {member.bio}
                 </p>
                 <Link
-                  href="/team"
+                  href={`/team#${member.name.toLowerCase().replace(/\s+/g, "-")}`}
                   className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-cta)] group-hover:gap-2.5 transition-all"
                 >
                   Read full bio
