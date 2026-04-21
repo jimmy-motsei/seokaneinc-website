@@ -22,6 +22,7 @@ export function NewsletterWidget({ variant = "dark" }: Props) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const email = (formData.get("email") as string).trim().toLowerCase();
+    const firstName = (formData.get("firstName") as string).trim();
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setState({ status: "invalid_email" });
@@ -33,7 +34,7 @@ export function NewsletterWidget({ variant = "dark" }: Props) {
         const res = await fetch("/api/newsletter", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email }),
+          body: JSON.stringify({ email, firstName }),
         });
 
         const data = await res.json().catch(() => ({}));

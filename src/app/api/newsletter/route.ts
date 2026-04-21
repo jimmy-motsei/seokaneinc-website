@@ -5,7 +5,7 @@ const NEWSLETTER_LIST_ID = 3; // ← Replace with your Brevo "Newsletter Subscri
 
 export async function POST(req: NextRequest) {
   try {
-    const { email } = await req.json();
+    const { email, firstName } = await req.json();
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json(
@@ -22,6 +22,9 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         email,
+        attributes: {
+          ...(firstName ? { FIRSTNAME: firstName.trim() } : {}),
+        },
         listIds: [NEWSLETTER_LIST_ID],
         updateEnabled: true,
       }),
