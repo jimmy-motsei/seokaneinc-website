@@ -358,7 +358,7 @@ export default function HomePage() {
                   />
                   <div className="img-overlay-tint" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl font-serif">{member.name}</h3>
+                <h3 className="text-2xl [font-family:var(--font-display)]">{member.name}</h3>
                 <p className="text-sm font-medium text-[var(--color-amber)] mt-0.5">{member.title}</p>
                 <p className="mt-2 text-sm text-[var(--color-ink-muted)] leading-relaxed line-clamp-3">
                   {member.bio}
@@ -396,7 +396,7 @@ export default function HomePage() {
               </div>
               <div className="text-left">
                 <p className="text-sm font-semibold text-[var(--color-ink)]">Mr. Justice Letsoela</p>
-                <p className="text-xs text-[var(--color-ink-muted)]">Managing Director : Cleanspikes Environment and Engineering</p>
+                <p className="text-xs text-[var(--color-ink-muted)]">Managing Director, Cleanspikes Environment and Engineering</p>
               </div>
             </footer>
           </blockquote>
