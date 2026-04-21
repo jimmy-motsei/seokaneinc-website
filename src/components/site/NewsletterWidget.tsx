@@ -2,13 +2,18 @@
 
 import { useRef, useState, useTransition } from "react";
 import { Mail, ArrowRight, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-import { subscribeToNewsletter } from "@/app/actions";
-import type { SubscribeResult } from "@/app/actions";
+
+type SubscribeState =
+  | { status: "idle" }
+  | { status: "success" }
+  | { status: "already_subscribed" }
+  | { status: "invalid_email" }
+  | { status: "error"; message: string };
 
 type Props = { variant?: "dark" | "light" };
 
 export function NewsletterWidget({ variant = "dark" }: Props) {
-  const [result, setResult] = useState<SubscribeResult | null>(null);
+  const [state, setState] = useState<SubscribeState>({ status: "idle" });
   const [isPending, startTransition] = useTransition();
   const formRef = useRef<HTMLFormElement>(null);
   const isDark = variant === "dark";
@@ -16,10 +21,36 @@ export function NewsletterWidget({ variant = "dark" }: Props) {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
+    const email = (formData.get("email") as string).trim().toLowerCase();
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setState({ status: "invalid_email" });
+      return;
+    }
+
     startTransition(async () => {
-      const res = await subscribeToNewsletter(formData);
-      setResult(res);
-      if (res.status === "success") formRef.current?.reset();
+      try {
+        const res = await fetch("/api/newsletter", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok) {
+          if (data.message === "You're already subscribed.") {
+            setState({ status: "already_subscribed" });
+          } else {
+            setState({ status: "success" });
+            formRef.current?.reset();
+          }
+        } else {
+          setState({ status: "error", message: data.error ?? "Subscription failed. Please try again." });
+        }
+      } catch {
+        setState({ status: "error", message: "Network error. Please try again." });
+      }
     });
   }
 
@@ -44,20 +75,20 @@ export function NewsletterWidget({ variant = "dark" }: Props) {
             </p>
           </div>
           <div>
-            {result?.status === "success" ? (
+            {state.status === "success" ? (
               <div className={`flex items-start gap-3 rounded-sm p-5 ${isDark ? "bg-white/8" : "bg-white border border-[var(--color-surface-dark)]"}`}>
                 <CheckCircle className="h-5 w-5 shrink-0 mt-0.5 text-emerald-400" aria-hidden="true" />
                 <div>
-                  <p className={`text-sm font-semibold ${isDark ? "text-white" : "text-[var(--color-ink)]"}`}>Check your inbox</p>
+                  <p className={`text-sm font-semibold ${isDark ? "text-white" : "text-[var(--color-ink)]"}`}>You&rsquo;re subscribed</p>
                   <p className={`mt-1 text-sm ${isDark ? "text-white/55" : "text-[var(--color-ink-muted)]"}`}>
-                    We&rsquo;ve sent a confirmation link. Click it to complete your subscription.
+                    Welcome to Legal Insights. You&rsquo;ll hear from us when it matters.
                   </p>
-                  <button onClick={() => setResult(null)} className={`mt-3 text-xs underline underline-offset-2 transition-colors ${isDark ? "text-white/40 hover:text-white/70" : "text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]"}`}>
+                  <button onClick={() => setState({ status: "idle" })} className={`mt-3 text-xs underline underline-offset-2 transition-colors ${isDark ? "text-white/40 hover:text-white/70" : "text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]"}`}>
                     Subscribe another address
                   </button>
                 </div>
               </div>
-            ) : result?.status === "already_subscribed" ? (
+            ) : state.status === "already_subscribed" ? (
               <div className={`flex items-start gap-3 rounded-sm p-5 ${isDark ? "bg-white/8" : "bg-white border border-[var(--color-surface-dark)]"}`}>
                 <CheckCircle className="h-5 w-5 shrink-0 mt-0.5 text-[var(--color-amber)]" aria-hidden="true" />
                 <div>
@@ -73,11 +104,11 @@ export function NewsletterWidget({ variant = "dark" }: Props) {
                   <input type="email" name="email" placeholder="Email address" required autoComplete="email"
                     className={`px-4 py-3 text-sm outline-none transition-colors ${isDark ? "bg-white/8 border border-white/15 text-white placeholder:text-white/30 focus:border-white/40" : "bg-white border border-[var(--color-surface-dark)] text-[var(--color-ink)] placeholder:text-[var(--color-ink-faint)] focus:border-[var(--color-navy-muted)]"}`} />
                 </div>
-                {(result?.status === "error" || result?.status === "invalid_email") && (
+                {(state.status === "error" || state.status === "invalid_email") && (
                   <div className="flex items-center gap-2 mb-3">
                     <AlertCircle className="h-4 w-4 shrink-0 text-red-400" aria-hidden="true" />
                     <p className={`text-xs ${isDark ? "text-red-400" : "text-red-600"}`}>
-                      {result.status === "invalid_email" ? "Please enter a valid email address." : (result as { status: "error"; message: string }).message}
+                      {state.status === "invalid_email" ? "Please enter a valid email address." : state.message}
                     </p>
                   </div>
                 )}

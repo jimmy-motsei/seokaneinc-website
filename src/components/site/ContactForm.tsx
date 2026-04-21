@@ -3,8 +3,6 @@
 import { useRef, useState, useTransition } from "react";
 import Link from "next/link";
 import { Send, Loader2, CheckCircle, AlertCircle, Phone } from "lucide-react";
-import { submitContactForm } from "@/app/actions";
-import type { ContactResult } from "@/app/actions";
 import { office } from "@/content/site-content";
 
 const FIELD_CLASS =
@@ -13,25 +11,85 @@ const FIELD_CLASS =
 const FIELD_ERROR_CLASS =
   "w-full border border-red-400 bg-red-50 px-4 py-3 text-sm text-[var(--color-ink)] placeholder:text-[var(--color-ink-faint)] outline-none transition-colors focus:border-red-500";
 
+const MATTER_LABELS: Record<string, string> = {
+  "corporate-law": "Corporate Law",
+  "commercial-law": "Commercial Law",
+  "company-secretarial": "Company Secretarial",
+  "intellectual-property": "Intellectual Property",
+  "commercial-litigation": "Commercial Litigation",
+  "administration-of-estates": "Administration of Estates",
+  "wills-and-trusts": "Wills and Trusts",
+  "sme-services": "SME Services",
+  other: "Other / General Inquiry",
+};
+
+type FormState =
+  | { status: "idle" }
+  | { status: "success" }
+  | { status: "error"; message: string };
+
 export function ContactForm() {
-  const [result, setResult] = useState<ContactResult | null>(null);
+  const [state, setState] = useState<FormState>({ status: "idle" });
   const [isPending, startTransition] = useTransition();
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const formRef = useRef<HTMLFormElement>(null);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setFieldErrors({});
     const formData = new FormData(e.currentTarget);
+
+    const name      = (formData.get("name")            as string).trim();
+    const email     = (formData.get("email")           as string).trim().toLowerCase();
+    const phone     = (formData.get("phone")           as string).trim();
+    const subject   = (formData.get("subject")         as string).trim();
+    const message   = (formData.get("message")         as string).trim();
+    const honeypot  = (formData.get("company_website") as string).trim();
+
+    if (honeypot) { setState({ status: "success" }); return; }
+
+    const errors: Record<string, string> = {};
+    if (!name)    errors.name    = "Full name is required.";
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+                  errors.email   = "A valid email address is required.";
+    if (!subject) errors.subject = "Please select a matter type.";
+    if (!message) errors.message = "A brief description is required.";
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      return;
+    }
+
+    setFieldErrors({});
+    setState({ status: "idle" });
+
     startTransition(async () => {
-      const res = await submitContactForm(formData);
-      setResult(res);
-      if (res.status === "validation_error") setFieldErrors(res.errors);
-      if (res.status === "success") formRef.current?.reset();
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            matterType: MATTER_LABELS[subject] ?? subject,
+            message,
+          }),
+        });
+
+        if (res.ok) {
+          setState({ status: "success" });
+          formRef.current?.reset();
+        } else {
+          const data = await res.json().catch(() => ({}));
+          setState({ status: "error", message: data.error ?? "Failed to send your message. Please try again or call us directly." });
+        }
+      } catch {
+        setState({ status: "error", message: "Network error. Please try again or call us directly." });
+      }
     });
   }
 
-  if (result?.status === "success") {
+  if (state.status === "success") {
     return (
       <div className="card-base flex flex-col items-center justify-center text-center py-10 px-6 sm:px-8 sm:py-14 min-h-[360px] sm:min-h-[480px]">
         <div className="inline-flex h-14 w-14 items-center justify-center bg-emerald-50 rounded-full mb-5">
@@ -47,7 +105,7 @@ export function ContactForm() {
             {office.phone}
           </a>{" "}directly.
         </p>
-        <button onClick={() => { setResult(null); setFieldErrors({}); }}
+        <button onClick={() => { setState({ status: "idle" }); setFieldErrors({}); }}
           className="text-sm font-semibold text-[var(--color-navy)] underline underline-offset-3 hover:text-[var(--color-cta)] transition-colors">
           Send another message
         </button>
@@ -57,10 +115,10 @@ export function ContactForm() {
 
   return (
     <form ref={formRef} onSubmit={handleSubmit} noValidate className="card-base space-y-4">
-      {result?.status === "error" && (
+      {state.status === "error" && (
         <div className="flex items-start gap-3 border border-red-200 bg-red-50 px-4 py-3">
           <AlertCircle className="h-4 w-4 shrink-0 mt-0.5 text-red-500" aria-hidden="true" />
-          <p className="text-sm text-red-700">{result.message}</p>
+          <p className="text-sm text-red-700">{state.message}</p>
         </div>
       )}
       <div>
