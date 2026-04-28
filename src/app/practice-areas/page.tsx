@@ -25,10 +25,10 @@ export default function PracticeAreasPage() {
           </div>
           <div className="relative h-80 lg:h-full lg:min-h-[360px] overflow-hidden">
             <Image
-              src="/images/attorneys-consultation.jpg"
-              alt="Seokane Inc. attorneys in consultation"
+              src="/images/practice-areas.png"
+              alt="Seokane Inc. practice areas"
               fill
-              className="object-cover object-center"
+              className="object-cover object-[center_30%]"
               sizes="(max-width: 1024px) 100vw, 45vw"
               priority
             />
