@@ -25,7 +25,7 @@ export default function PracticeAreasPage() {
           </div>
           <div className="relative h-80 lg:h-full lg:min-h-[360px] overflow-hidden">
             <Image
-              src="/images/practice-areas.png"
+              src="/images/practice-area.png"
               alt="Seokane Inc. practice areas"
               fill
               className="object-cover object-[center_30%]"
