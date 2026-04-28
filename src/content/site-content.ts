@@ -243,7 +243,7 @@ export const articles: Article[] = [
     title: "Urgent Interdict Applications: When Speed Matters",
     excerpt:
       "An urgent interdict can stop wrongful conduct in its tracks — but only if you act correctly and quickly. Understanding the requirements is essential.",
-    image: "/images/attorneys-consultation.jpg",
+    image: "/images/urgent-interdicts.jpg",
     readTime: "4 min read",
     author: "Sesethu Zingelwa",
     body: `
